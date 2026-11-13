@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Pumps × BigChange: Enquiry to Invoice, Warehouse to Report, in One System</title>
+    <meta name="description" content="A tailored proposal for Priority Pumps: a CRM for prospects, a clean handover from quote to purchasing and picking, and reports finished on site.">
+    <meta name="author" content="BigChange">
+    <meta property="og:title" content="Priority Pumps &amp; BigChange">
+    <meta property="og:description" content="Quote accepted. Parts bought, picked and on the bay. Report out the same day.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Flex:opsz,wght@8..144,500;8..144,700;8..144,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+
+        :root {
+            --bc-energy-blue: #0072CE;
+            --bc-navy: #0A2240;
+            --bc-green: #28E289;
+            --bc-orange: #FF6B00;
+            --bc-light-grey: #F4F4F4;
+            --bc-charcoal: #282922;
+            --bc-white: #FFFFFF;
+
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-4: 1rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+
+            --border-radius: 0.85rem;
+            --box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08), 0 2px 4px -2px rgba(0,0,0,0.08);
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bc-white);
+            color: var(--bc-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 var(--spacing-6); }
+        section { padding: var(--spacing-16) 0; }
+        h1, h2, h3, h4 { font-family: 'Roboto Flex', 'Inter', system-ui, sans-serif; color: var(--bc-navy); line-height: 1.15; margin-bottom: var(--spacing-4); }
+        h1 { font-size: 2.9rem; font-weight: 800; letter-spacing: -0.02em; }
+        h2 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.01em; }
+        h3 { font-size: 1.4rem; font-weight: 700; }
+        a { color: var(--bc-energy-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        mark.hl-g { background: linear-gradient(180deg, transparent 55%, rgba(40,226,137,0.55) 55%); color: inherit; padding: 0 2px; }
+
+        .section-title { text-align: center; margin-bottom: var(--spacing-12); max-width: 860px; margin-left: auto; margin-right: auto; }
+        .section-title p { font-size: 1.08rem; color: #4b5563; }
+        .eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--bc-energy-blue); margin-bottom: var(--spacing-2); }
+        .msi { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; }
+
+        /* Sticky nav */
+        #sticky-nav { position: sticky; top: 0; z-index: 100; background-color: rgba(10,34,64,0.97); backdrop-filter: blur(8px); box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
+        #sticky-nav .container { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-4); padding-top: 0.7rem; padding-bottom: 0.7rem; }
+        #sticky-nav .nav-brand img { height: 26px; display: block; }
+        #sticky-nav .nav-links { display: flex; gap: var(--spacing-4); flex-wrap: wrap; align-items: center; }
+        #sticky-nav .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.2rem; border-bottom: 2px solid transparent; transition: all var(--transition-speed); }
+        #sticky-nav .nav-links a:hover { color: var(--bc-green); text-decoration: none; border-bottom-color: var(--bc-green); }
+        #sticky-nav .nav-cta { background-color: var(--bc-green); color: var(--bc-navy) !important; padding: 0.45rem 1rem !important; border-radius: 8px; border-bottom: none !important; font-weight: 700; }
+        #sticky-nav .nav-cta:hover { background-color: #21c476; }
+        #sticky-nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+
+        /* Hero */
+        #hero { background: linear-gradient(150deg, var(--bc-navy) 0%, #0d2f5c 55%, #0a4a8f 100%); color: var(--bc-white); padding: var(--spacing-16) 0; text-align: center; position: relative; overflow: hidden; }
+        #hero::before { content: ''; position: absolute; top: -160px; right: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(40,226,137,0.16) 0%, transparent 70%); pointer-events: none; }
+        #hero::after { content: ''; position: absolute; bottom: -200px; left: -180px; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle, rgba(0,114,206,0.25) 0%, transparent 70%); pointer-events: none; }
+        #hero .container { position: relative; z-index: 1; }
+        #hero h1, #hero p { color: var(--bc-white); }
+        #hero h1 { font-size: 3rem; max-width: 980px; margin-left: auto; margin-right: auto; }
+        #hero .subhead { font-size: 1.15rem; max-width: 860px; margin: var(--spacing-4) auto var(--spacing-8); opacity: 0.92; }
+        .hero-pill { display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(40,226,137,0.12); border: 1px solid rgba(40,226,137,0.5); color: var(--bc-green); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.45rem 1.1rem; border-radius: 9999px; margin-bottom: var(--spacing-6); }
+        .hero-pill .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bc-green); display: inline-block; animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .3; transform: scale(.65); } }
+        .hero-accent { background: linear-gradient(135deg, var(--bc-green), #5ad1ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo-chip { background:#fff; border-radius: 10px; padding: 8px 14px; display:inline-flex; align-items:center; }
+        .logo-chip img { height: 46px; display:block; }
+        .logo-chip .logo-fallback { font-family:'Roboto Flex',sans-serif; font-weight:800; font-size:1.3rem; color:var(--bc-navy); letter-spacing:-0.01em; }
+
+        /* Hero split: copy left, demo video right */
+        .hero-split { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--spacing-12); align-items: center; text-align: left; }
+        .hero-split > * { min-width: 0; }
+        .hero-split h1 { font-size: 2.6rem !important; margin-left: 0 !important; margin-right: 0 !important; }
+        .hero-split .subhead { font-size: 1.05rem !important; margin: var(--spacing-4) 0 var(--spacing-8) !important; }
+        .hero-split .cta-buttons { justify-content: flex-start; }
+        .hero-video h4 { color: var(--bc-white); font-size: 1rem; margin-bottom: 0.6rem; opacity: 0.92; display: flex; align-items: center; gap: 0.5rem; }
+        .hero-video h4 .msi { font-size: 20px; color: var(--bc-green); }
+        .video-container { position: relative; padding-bottom: 80%; height: 0; overflow: hidden; width: 100%; border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.5); background: #000; border: 1px solid rgba(255,255,255,0.15); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-caption { font-size: 0.8rem; opacity: 0.7 !important; margin-top: 0.6rem; }
+        @media (max-width: 960px) {
+            .hero-split { grid-template-columns: 1fr; text-align: center; gap: var(--spacing-8); }
+            .hero-split .cta-buttons { justify-content: center; }
+            .hero-video h4 { justify-content: center; }
+        }
+        @media (max-width: 768px) { .hero-split h1 { font-size: 2.1rem !important; } }
+
+        .cta-buttons { display: flex; justify-content: center; gap: var(--spacing-4); flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 0.8rem 1.8rem; border-radius: var(--border-radius); font-weight: 700; text-decoration: none; transition: all var(--transition-speed); border: 2px solid transparent; cursor: pointer; font-size: 1rem; }
+        .btn-primary { background-color: var(--bc-green); border-color: var(--bc-green); color: var(--bc-navy); }
+        .btn-primary:hover { background-color: #21c476; text-decoration: none; }
+        .btn-secondary { background-color: transparent; color: var(--bc-white); border-color: var(--bc-white); }
+        .btn-secondary:hover { background-color: var(--bc-white); color: var(--bc-navy); text-decoration: none; }
+
+        .brief-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-4); max-width: 1060px; margin: var(--spacing-12) auto 0; }
+        .brief-card { background-color: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--border-radius); padding: var(--spacing-6) var(--spacing-4); text-align: left; }
+        .brief-card .msi { font-size: 30px; color: var(--bc-green); margin-bottom: 0.6rem; display: block; }
+        .brief-card h4 { color: var(--bc-white); font-size: 1.02rem; margin-bottom: 0.35rem; }
+        .brief-card p { color: var(--bc-white); font-size: 0.82rem; opacity: 0.88; line-height: 1.45; }
+
+        /* Edge band + stack */
+        .edge-band { display: grid; grid-template-columns: auto 1fr; gap: var(--spacing-6); align-items: center; background: var(--bc-navy); color: var(--bc-white); border-radius: var(--border-radius); padding: var(--spacing-6) var(--spacing-8); box-shadow: var(--box-shadow); border-left: 6px solid var(--bc-green); }
+        .edge-band .edge-icon { width: 62px; height: 62px; border-radius: 16px; background: rgba(40,226,137,0.14); display: flex; align-items: center; justify-content: center; }
+        .edge-band .edge-icon .msi { font-size: 34px; color: var(--bc-green); }
+        .edge-band h3 { color: var(--bc-white); font-size: 1.35rem; margin-bottom: 0.4rem; }
+        .edge-band p { font-size: 0.96rem; opacity: 0.9; margin: 0; }
+        .edge-band p .hl { color: var(--bc-green); font-weight: 700; }
+        .edge-band cite { display: block; font-style: normal; font-size: 0.8rem; color: var(--bc-green); font-weight: 600; margin: -0.2rem 0 0.6rem; }
+        .stack-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--spacing-4); margin-top: var(--spacing-6); }
+        .stack-card { background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: 12px; padding: var(--spacing-4); box-shadow: var(--box-shadow); }
+        .stack-card .st-name { font-family: 'Roboto Flex', sans-serif; font-weight: 800; color: var(--bc-navy); font-size: 1.05rem; }
+        .stack-card .st-role { font-size: 0.8rem; color: #6b7280; margin-bottom: 0.6rem; }
+        .stack-card .st-tag { display: inline-block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.22rem 0.6rem; border-radius: 9999px; }
+        .stack-card .st-tag.keep { background: #eaf4ff; color: var(--bc-energy-blue); }
+        .stack-card .st-tag.move { background: #e9fbf1; color: #0b7a45; }
+        .stack-card p { font-size: 0.82rem; margin-top: 0.5rem; line-height: 1.45; }
+
+        /* Quotes + compare */
+        .quote-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-6); margin-bottom: var(--spacing-8); }
+        .quote-pair.single { grid-template-columns: 1fr; max-width: 820px; margin-left: auto; margin-right: auto; }
+        .discovery-quote { background: var(--bc-navy); color: #fff; border-radius: var(--border-radius); padding: var(--spacing-8); position: relative; box-shadow: var(--box-shadow); }
+        .discovery-quote .msi { position: absolute; top: 16px; left: 20px; font-size: 46px; color: rgba(40,226,137,0.35); }
+        .discovery-quote blockquote { font-family: 'Roboto Flex', sans-serif; font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: #fff; padding-left: 2.6rem; }
+        .discovery-quote cite { display: block; margin-top: var(--spacing-4); padding-left: 2.6rem; font-style: normal; font-size: 0.9rem; color: var(--bc-green); font-weight: 600; }
+        .compare { border: 1px solid #e5e7eb; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); background: var(--bc-white); }
+        .compare-head, .compare-row { display: grid; grid-template-columns: 1fr 1fr; }
+        .compare-head > div { padding: 0.8rem 1.4rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; display: flex; align-items: center; gap: 0.4rem; }
+        .compare-head .ch-current { background-color: #fff1e6; color: #b45309; }
+        .compare-head .ch-fix { background-color: #e9fbf1; color: #0b7a45; }
+        .compare-head .msi { font-size: 16px; }
+        .compare-row > div { padding: 0.6rem 1.2rem 0.6rem 2.2rem; font-size: 0.86rem; line-height: 1.45; color: var(--bc-navy); position: relative; border-top: 1px solid #eef0f2; }
+        .compare-row .cc-current { background-color: #fff7f0; }
+        .compare-row .cc-fix { background-color: #f7fdf9; border-left: 1px solid #e5e7eb; }
+        .compare-row .cc-current::before, .compare-row .cc-fix::before { content: ''; position: absolute; left: 1.1rem; top: 0.95rem; width: 8px; height: 8px; border-radius: 50%; }
+        .compare-row .cc-current::before { background-color: var(--bc-orange); }
+        .compare-row .cc-fix::before { background-color: var(--bc-green); }
+
+        /* Business-line tabs */
+        .line-tabs { display: flex; justify-content: center; gap: var(--spacing-2); flex-wrap: wrap; margin-bottom: var(--spacing-8); }
+        .line-tab { font-family: inherit; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bc-white); border: 2px solid #e5e7eb; border-radius: 9999px; padding: 0.65rem 1.3rem; font-weight: 700; font-size: 0.95rem; color: var(--bc-navy); cursor: pointer; transition: all .25s; }
+        .line-tab .msi { font-size: 20px; color: var(--bc-energy-blue); }
+        .line-tab:hover { border-color: #9cc9ef; }
+        .line-tab.active { background: var(--bc-navy); border-color: var(--bc-navy); color: #fff; box-shadow: 0 8px 20px rgba(10,34,64,0.25); }
+        .line-tab.active .msi { color: var(--bc-green); }
+        .line-panel { background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); box-shadow: var(--box-shadow); overflow: hidden; }
+        .lp-head { background: linear-gradient(135deg, var(--bc-navy), #0d2f5c); color: #fff; padding: 1.3rem 1.8rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .lp-head h3 { color: #fff; margin: 0; font-size: 1.35rem; }
+        .lp-head p { font-size: 0.85rem; opacity: 0.8; margin: 0.2rem 0 0; }
+        .lp-chip { background: rgba(40,226,137,0.14); border: 1px solid rgba(40,226,137,0.5); color: var(--bc-green); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.35rem 0.8rem; border-radius: 9999px; white-space: nowrap; }
+        .lp-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 1.6rem 1.2rem 0.6rem; list-style: none; position: relative; }
+        .lp-step { padding: 0 0.6rem; position: relative; text-align: left; }
+        .lp-step .lp-icon { width: 48px; height: 48px; border-radius: 50%; background: #eaf4ff; display: flex; align-items: center; justify-content: center; margin-bottom: 0.7rem; position: relative; z-index: 1; border: 3px solid #fff; box-shadow: 0 0 0 2px #cfe5f8; }
+        .lp-step .lp-icon .msi { font-size: 24px; color: var(--bc-energy-blue); }
+        .lp-step:not(:last-child)::after { content: ''; position: absolute; top: 24px; left: calc(0.6rem + 48px); right: -0.6rem; height: 2px; background: linear-gradient(90deg, #cfe5f8, #e5e7eb); }
+        .lp-step .lp-n { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bc-energy-blue); }
+        .lp-step h4 { font-size: 1rem; margin: 0.15rem 0 0.35rem; }
+        .lp-step p { font-size: 0.84rem; line-height: 1.45; color: #374151; }
+        .lp-step.qa .lp-icon { background: #e9fbf1; box-shadow: 0 0 0 2px #9be8c3; }
+        .lp-step.qa .lp-icon .msi { color: #0b7a45; }
+        .lp-note { margin: 1rem 1.8rem 1.6rem; background: #f0fdf6; border: 1px solid #b9f3d6; border-radius: 10px; padding: 0.8rem 1.1rem; font-size: 0.9rem; color: var(--bc-navy); font-weight: 600; display: flex; gap: 0.5rem; align-items: flex-start; }
+        .lp-note .msi { font-size: 19px; color: #0b7a45; flex-shrink: 0; margin-top: 1px; }
+        .lines-foot { text-align: center; font-size: 0.85rem; color: #6b7280; margin-top: var(--spacing-4); }
+
+        /* Feature hub */
+        .features-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--spacing-8); align-items: center; }
+        .features-layout > * { min-width: 0; }
+        #feature-display { background-color: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); padding: var(--spacing-8); min-height: 320px; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--box-shadow); }
+        #feature-display-content { transition: opacity 0.4s ease-in-out; }
+        #feature-display-content .fd-head { display: flex; align-items: center; gap: var(--spacing-4); margin-bottom: var(--spacing-4); min-width: 0; }
+        #feature-display-content .fd-head .msi { font-size: 40px; color: var(--bc-energy-blue); }
+        #feature-display-content h3 { margin-bottom: 0; font-size: 1.5rem; min-width: 0; overflow-wrap: break-word; }
+        #feature-display-content .fd-desc { font-size: 0.98rem; color: var(--bc-charcoal); }
+        #feature-display-content .fd-you { display: flex; align-items: flex-start; gap: 0.5rem; margin-top: var(--spacing-4); background-color: #f0fdf6; border: 1px solid #b9f3d6; border-radius: 8px; padding: var(--spacing-2) var(--spacing-4); font-size: 0.9rem; color: var(--bc-navy); font-weight: 600; }
+        #feature-display-content .fd-you .msi { font-size: 18px; color: #0b7a45; flex-shrink: 0; margin-top: 2px; }
+        .fd-count { font-size: 0.75rem; color: #9ca3af; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-top: var(--spacing-4); }
+        .platform-hub-container { position: relative; width: 100%; max-width: 560px; aspect-ratio: 1 / 1; margin: auto; }
+        .hub-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 130px; height: 130px; background-color: var(--bc-navy); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; z-index: 10; box-shadow: 0 0 20px rgba(10, 34, 64, 0.5); animation: hub-pulse 2s infinite; text-align: center; padding: 10px; }
+        .hub-center img { max-width: 90px; height: auto; }
+        @keyframes hub-pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 114, 206, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(0, 114, 206, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 114, 206, 0); } }
+        .hub-node { position: absolute; width: 86px; height: 86px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: white; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; z-index: 5; padding: 8px; border: 3px solid transparent; }
+        .hub-node.active, .hub-node:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 10px 25px rgba(0, 114, 206, 0.3); border-color: var(--bc-energy-blue); z-index: 20; }
+        .hub-node .msi { font-size: 26px; color: var(--bc-energy-blue); }
+        .hub-node .feature-name { font-size: 9px; font-weight: 600; margin-top: 4px; color: var(--bc-navy); line-height: 1.2; }
+        .hub-line { position: absolute; background-color: #d1d5db; height: 2px; transform-origin: left center; z-index: 1; }
+        .feature-tile-grid { display: none; }
+        @media (max-width: 900px) {
+            .features-layout { grid-template-columns: 1fr; }
+            .platform-hub-container { display: none; }
+            .feature-tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: var(--spacing-2); }
+            .feature-tile { background: white; border: 2px solid #e5e7eb; border-radius: 10px; padding: 0.7rem 0.4rem; text-align: center; cursor: pointer; transition: all 0.25s ease; font-family: inherit; }
+            .feature-tile .msi { font-size: 24px; color: var(--bc-energy-blue); }
+            .feature-tile .feature-name { display: block; font-size: 0.68rem; font-weight: 600; color: var(--bc-navy); margin-top: 4px; line-height: 1.2; overflow-wrap: anywhere; }
+            .feature-tile.active { border-color: var(--bc-energy-blue); box-shadow: 0 4px 12px rgba(0,114,206,0.2); }
+        }
+
+        /* Assurance band (dark) */
+        #assurance { background: linear-gradient(150deg, var(--bc-navy) 0%, #0d2f5c 60%, #0a4a8f 100%); color: var(--bc-white); position: relative; overflow: hidden; }
+        #assurance::before { content: ''; position: absolute; top: -140px; left: -120px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(0,114,206,0.28) 0%, transparent 70%); pointer-events: none; }
+        #assurance .container { position: relative; z-index: 1; }
+        #assurance .section-title h2, #assurance .section-title p { color: var(--bc-white); }
+        #assurance .section-title p { opacity: 0.9; }
+        #assurance .eyebrow { color: var(--bc-green); }
+        .assure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-6); }
+        .assure-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--border-radius); padding: var(--spacing-6); }
+        .assure-card .ac-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.4rem; }
+        .assure-card .ac-head .msi { font-size: 30px; color: var(--bc-green); }
+        .assure-card h3 { color: #fff; font-size: 1.15rem; margin: 0; }
+        .assure-card .ac-q { font-size: 0.82rem; color: rgba(255,255,255,0.6); font-style: italic; margin-bottom: 0.8rem; }
+        .assure-card ul { list-style: none; }
+        .assure-card li { position: relative; padding-left: 1.3rem; font-size: 0.88rem; line-height: 1.45; margin-bottom: 0.5rem; color: rgba(255,255,255,0.92); }
+        .assure-card li::before { content: ''; position: absolute; left: 0; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--bc-green); }
+        .assure-note { display: flex; align-items: flex-start; gap: 0.6rem; margin: var(--spacing-8) auto 0; background-color: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px; padding: 0.9rem 1.2rem; font-size: 0.9rem; color: #fff; }
+        .assure-note .msi { font-size: 20px; color: var(--bc-green); flex-shrink: 0; margin-top: 1px; }
+
+        /* Case studies */
+        .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-6); }
+        .cs-card { background: linear-gradient(150deg, #061a33, var(--bc-navy) 60%, #0a3a70); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(10,34,64,.22); transition: transform .35s, box-shadow .35s; }
+        .cs-card:hover { transform: translateY(-6px); box-shadow: 0 28px 70px rgba(10,34,64,.30); }
+        .cs-thumb { position: relative; height: 190px; overflow: hidden; background: var(--bc-navy); }
+        .cs-thumb.noimg { background: linear-gradient(135deg, #0a3a70, var(--bc-energy-blue)); }
+        .cs-thumb > img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+        .cs-card:hover .cs-thumb > img { transform: scale(1.06); }
+        .cs-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,34,64,0) 30%, rgba(6,20,40,.92) 100%); z-index: 1; }
+        .cs-thumb-overlay { position: absolute; left: 18px; right: 18px; bottom: 16px; z-index: 2; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .cs-logo-chip { background: #fff; border-radius: 9px; padding: 7px 12px; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+        .cs-logo-chip img { max-height: 28px; max-width: 130px; object-fit: contain; display: block; }
+        .cs-logo-chip .cs-logo-fallback { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--bc-navy); }
+        .cs-industry { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bc-green); }
+        .cs-body { padding: var(--spacing-6); display: flex; flex-direction: column; flex: 1; }
+        .cs-stats { display: flex; margin-bottom: var(--spacing-4); }
+        .cs-stat { flex: 1; text-align: center; padding: 0 6px; border-right: 1px solid rgba(255,255,255,.12); }
+        .cs-stat:last-child { border-right: none; }
+        .cs-stat .n { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.9rem; line-height: 1.05; background: linear-gradient(135deg, var(--bc-green), #5ad1ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .cs-stat .l { font-size: 0.66rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 5px; line-height: 1.3; }
+        .cs-why { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #5ad1ff; margin-bottom: 0.4rem; }
+        .cs-quote { font-size: 0.9rem; color: rgba(255,255,255,.8); line-height: 1.6; flex: 1; margin-bottom: var(--spacing-4); }
+        .cs-who { font-size: 0.8rem; font-weight: 700; color: #fff; padding-top: var(--spacing-4); border-top: 1px solid rgba(255,255,255,.12); margin-bottom: var(--spacing-4); }
+        .cs-who span { display: block; font-weight: 500; color: rgba(255,255,255,.5); font-size: 0.75rem; margin-top: 2px; }
+        .cs-link { font-size: 0.82rem; font-weight: 700; color: var(--bc-green); text-decoration: none; margin-top: auto; display: inline-flex; align-items: center; gap: 5px; }
+        .cs-link:hover { text-decoration: underline; }
+
+        /* Next steps + commercials */
+        #next-steps { background-color: var(--bc-navy); color: var(--bc-white); }
+        .next-steps-card { background-color: var(--bc-white); color: var(--bc-charcoal); border-radius: var(--border-radius); padding: var(--spacing-8); max-width: 900px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border-top: 6px solid var(--bc-energy-blue); }
+        .next-steps-card h3 { color: var(--bc-navy); font-size: 1.8rem; margin-bottom: var(--spacing-4); }
+        .next-steps-card > p.lead { font-size: 1.05rem; margin-bottom: var(--spacing-6); }
+        .price-card { display: grid; grid-template-columns: auto 1fr; gap: var(--spacing-6); align-items: center; border: 2px solid var(--bc-green); background: #f5fdf9; border-radius: var(--border-radius); padding: var(--spacing-6); }
+        .price-card .pc-big { text-align: center; background: var(--bc-navy); color: #fff; border-radius: 12px; padding: 1rem 1.4rem; }
+        .price-card .pc-big .pc-from { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bc-green); }
+        .price-card .pc-big .pc-amt { font-family: 'Roboto Flex', sans-serif; font-size: 2.3rem; font-weight: 800; line-height: 1.05; }
+        .price-card .pc-big .pc-unit { font-size: 0.78rem; opacity: 0.75; }
+        .price-card h4 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .price-card p { font-size: 0.9rem; margin: 0; }
+        .incl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem 1.5rem; list-style: none; margin: var(--spacing-6) 0 0; }
+        .incl-grid li { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.9rem; }
+        .incl-grid li .msi { font-size: 19px; color: #0b7a45; flex-shrink: 0; margin-top: 1px; }
+        .price-note { font-size: 0.82rem; color: #6b7280; margin-top: var(--spacing-4); }
+        .step-list { counter-reset: step; list-style: none; margin: 0.5rem 0 0; }
+        .step-list li { position: relative; padding-left: 3rem; margin-bottom: var(--spacing-4); font-size: 1rem; }
+        .step-list li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: -2px; width: 2rem; height: 2rem; border-radius: 50%; background-color: var(--bc-energy-blue); color: var(--bc-white); font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+        .step-list li .when { display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #0b7a45; background: #e9fbf1; padding: 0.1rem 0.5rem; border-radius: 9999px; margin-left: 0.4rem; vertical-align: middle; }
+
+        footer { background-color: var(--bc-navy); color: var(--bc-light-grey); padding: var(--spacing-8) 0 var(--spacing-12); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+        /* Reveal */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease-out, transform .7s ease-out; }
+        .reveal.visible { opacity: 1; transform: none; }
+        .line-tab:focus-visible, .hub-node:focus-visible, .feature-tile:focus-visible { outline: 3px solid var(--bc-green); outline-offset: 2px; }
+
+        @media (max-width: 1024px) {
+            .brief-band { grid-template-columns: repeat(2, 1fr); }
+            .stack-grid { grid-template-columns: repeat(2, 1fr); }
+            .lp-steps { grid-template-columns: 1fr; gap: 1rem; padding: 1.4rem 1.6rem 0.4rem; }
+            .lp-step { display: grid; grid-template-columns: 48px 1fr; column-gap: 1rem; padding: 0; }
+            .lp-step .lp-icon { grid-row: span 3; margin: 0; }
+            .lp-step:not(:last-child)::after { top: 52px; left: 23px; right: auto; width: 2px; height: calc(100% - 40px); background: #e5e7eb; }
+            .assure-grid { grid-template-columns: 1fr; }
+            .cs-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 2.1rem; }
+            h2 { font-size: 1.7rem; }
+            section { padding: var(--spacing-12) 0; }
+            #sticky-nav .nav-links a:not(.nav-cta) { display: none; }
+            .brief-band { grid-template-columns: 1fr; }
+            .edge-band { grid-template-columns: 1fr; padding: var(--spacing-6); }
+            .quote-pair { grid-template-columns: 1fr; }
+            .compare-head, .compare-row { grid-template-columns: 1fr; }
+            .compare-row .cc-fix { border-left: none; }
+            .price-card { grid-template-columns: 1fr; }
+            .incl-grid { grid-template-columns: 1fr; }
+            #feature-display { padding: var(--spacing-6) var(--spacing-4); }
+            .next-steps-card { padding: var(--spacing-6); }
+        }
+        @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr; } }
+
+        /* ===== Shared additions ===== */
+        .msi { width: 1em; overflow: hidden; flex-shrink: 0; }
+        .j-nav { flex-wrap: wrap; }
+        .logo-chip img { height: 52px; }
+        .stack-card .st-tag.check { background: #fff4e5; color: #b45309; }
+
+        /* Recording chapters dropdown */
+        .chapters { margin-top: 0.7rem; text-align: left; }
+        .chapters summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--bc-green); padding: 0.35rem 0.8rem; border: 1px solid rgba(40,226,137,0.45); border-radius: 9999px; background: rgba(40,226,137,0.08); }
+        .chapters summary::-webkit-details-marker { display: none; }
+        .chapters summary .msi { font-size: 18px; transition: transform .25s; }
+        .chapters[open] summary .msi { transform: rotate(180deg); }
+        .chapters ol { list-style: none; margin-top: 0.6rem; background: rgba(6,20,40,0.6); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.5rem 0.8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.15rem 1rem; }
+        .chapters li { font-size: 0.8rem; color: rgba(255,255,255,0.88); display: flex; gap: 0.55rem; padding: 0.22rem 0; }
+        .chapters li b { font-variant-numeric: tabular-nums; color: var(--bc-green); font-weight: 700; min-width: 2.6rem; }
+        .chapters .ch-note { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 0.4rem; }
+
+        /* Journey click-through */
+        #journey { background-color: var(--bc-light-grey); }
+        .journey { background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: 18px; box-shadow: 0 20px 50px rgba(10,34,64,0.10); overflow: hidden; }
+        .j-banner { position: relative; padding: 1.6rem 2rem; color: #fff; background: linear-gradient(100deg, rgba(10,34,64,0.96) 0%, rgba(10,34,64,0.88) 55%, rgba(10,34,64,0.55) 100%), var(--bc-navy); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .j-banner h3 { color: #fff; margin: 0; font-size: 1.3rem; }
+        .j-banner p { margin: 0.2rem 0 0; font-size: 0.88rem; opacity: 0.85; }
+        .j-banner .lp-chip { background: rgba(40,226,137,0.18); }
+        .j-steps { display: grid; grid-template-columns: repeat(7, 1fr); list-style: none; padding: 1.6rem 1.2rem 0.4rem; position: relative; }
+        .j-track { position: absolute; top: calc(1.6rem + 23px); left: calc(1.2rem + 7.14%); right: calc(1.2rem + 7.14%); height: 3px; background: #e5e7eb; border-radius: 3px; }
+        .j-track span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--bc-energy-blue), var(--bc-green)); border-radius: 3px; transition: width .45s ease; }
+        .j-step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.45rem; background: none; border: none; font-family: inherit; cursor: pointer; padding: 0 0.25rem; }
+        .j-dot { width: 48px; height: 48px; border-radius: 50%; background: #fff; border: 3px solid #d1d5db; display: flex; align-items: center; justify-content: center; transition: all .3s; }
+        .j-dot .msi { font-size: 22px; color: #9ca3af; transition: color .3s; }
+        .j-step .j-lab { font-size: 0.78rem; font-weight: 700; color: #6b7280; line-height: 1.25; }
+        .j-step .j-who { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #9ca3af; }
+        .j-step.done .j-dot { border-color: var(--bc-energy-blue); background: #eaf4ff; }
+        .j-step.done .j-dot .msi { color: var(--bc-energy-blue); }
+        .j-step.active .j-dot { border-color: var(--bc-green); background: var(--bc-navy); transform: scale(1.12); box-shadow: 0 8px 20px rgba(10,34,64,0.25); }
+        .j-step.active .j-dot .msi { color: var(--bc-green); }
+        .j-step.active .j-lab { color: var(--bc-navy); }
+        .j-step:hover .j-dot { border-color: var(--bc-energy-blue); }
+        .j-step:focus-visible { outline: 3px solid var(--bc-green); outline-offset: 4px; border-radius: 10px; }
+        .j-panel { padding: 1.2rem 2rem 1.8rem; }
+        .j-panel-inner { transition: opacity .3s ease; }
+        .j-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid #eef0f2; padding-bottom: 0.9rem; margin-bottom: 1.1rem; }
+        .j-head h3 { margin: 0; font-size: 1.45rem; }
+        .j-head .j-num { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bc-energy-blue); display: block; margin-bottom: 0.15rem; }
+        .j-whochip { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; font-weight: 800; padding: 0.4rem 0.9rem; border-radius: 9999px; background: #eaf4ff; color: var(--bc-energy-blue); }
+        .j-whochip .msi { font-size: 17px; }
+        .j-whochip.cust { background: #fff4e5; color: #b45309; }
+        .j-whochip.sub { background: #e9fbf1; color: #0b7a45; }
+        .j-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+        .j-col { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.2rem; }
+        .j-col h4 { display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; color: var(--bc-navy); }
+        .j-col h4 .msi { font-size: 19px; color: var(--bc-energy-blue); }
+        .j-col.field h4 .msi { color: #0b7a45; }
+        .j-col ul { list-style: none; }
+        .j-col li { position: relative; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.45; margin-bottom: 0.45rem; color: #374151; }
+        .j-col li::before { content: ''; position: absolute; left: 0; top: 0.5rem; width: 7px; height: 7px; border-radius: 50%; background: var(--bc-energy-blue); }
+        .j-col.field li::before { background: var(--bc-green); }
+        .j-panel .lp-note { margin: 1.1rem 0 0; }
+        .j-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; gap: 1rem; }
+        .j-btn { font-family: inherit; display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; font-size: 0.9rem; padding: 0.55rem 1.1rem; border-radius: 9999px; border: 2px solid #e5e7eb; background: #fff; color: var(--bc-navy); cursor: pointer; transition: all .25s; }
+        .j-btn:hover:not(:disabled) { border-color: var(--bc-energy-blue); }
+        .j-btn.next { background: var(--bc-navy); border-color: var(--bc-navy); color: #fff; }
+        .j-btn.next .msi { color: var(--bc-green); }
+        .j-btn:disabled { opacity: 0.4; cursor: default; }
+        .j-btn .msi { font-size: 18px; }
+        .j-count { font-size: 0.78rem; color: #9ca3af; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+        /* Assurance: 2x2 */
+        .assure-grid.four { grid-template-columns: repeat(2, 1fr); }
+
+        /* Confirm list in next steps */
+        .confirm-box { margin-top: var(--spacing-8); background: var(--bc-light-grey); border-radius: 12px; padding: 1.2rem 1.4rem; }
+        .confirm-box h4 { font-size: 1rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.45rem; }
+        .confirm-box h4 .msi { font-size: 20px; color: var(--bc-energy-blue); }
+        .confirm-box ul { list-style: none; }
+        .confirm-box li { position: relative; padding-left: 1.3rem; font-size: 0.92rem; margin-bottom: 0.4rem; }
+        .confirm-box li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 8px; height: 8px; border-radius: 50%; background: var(--bc-energy-blue); }
+
+        @media (max-width: 1024px) {
+            .j-steps { grid-template-columns: repeat(4, 1fr); row-gap: 1.2rem; }
+            .j-track { display: none; }
+            .assure-grid.four { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .j-steps { grid-template-columns: repeat(3, 1fr); padding: 1.2rem 0.8rem 0.2rem; }
+            .j-panel { padding: 1rem 1.2rem 1.4rem; }
+            .j-cols { grid-template-columns: 1fr; }
+            .j-banner { padding: 1.3rem 1.2rem; }
+            .chapters ol { grid-template-columns: 1fr; }
+        }
+
+        /* ===== TGA additions ===== */
+        #heard { background-color: var(--bc-white); }
+        #journey { background-color: var(--bc-light-grey); }
+        #case-studies { background-color: var(--bc-light-grey); }
+        .logo-chip img { height: 56px; }
+        .brief-band { margin-top: var(--spacing-12); }
+        .brief-card .n { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.7rem; line-height: 1.1; color: var(--bc-white); margin-bottom: 0.2rem; }
+        .brief-card .n small { font-size: 0.9rem; opacity: 0.75; font-weight: 700; }
+        .stack-grid { grid-template-columns: repeat(6, 1fr); }
+        .stack-card .st-tag.later { background: #f3f0ff; color: #5b3fc4; }
+
+        .keep-strip { margin-top: var(--spacing-8); background: #f0fdf6; border: 1px solid #b9f3d6; border-radius: var(--border-radius); padding: 1.1rem 1.4rem; display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center; }
+        .keep-strip .ks-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #0b7a45; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
+        .keep-strip .ks-label .msi { font-size: 18px; }
+        .keep-strip ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .keep-strip li { background: #fff; border: 1px solid #b9f3d6; border-radius: 9999px; padding: 0.3rem 0.85rem; font-size: 0.84rem; font-weight: 600; color: var(--bc-navy); }
+
+        /* Investment: invoice card */
+        .inv-intro { display: grid; grid-template-columns: 1fr auto; gap: 1.2rem; align-items: center; margin-bottom: var(--spacing-6); }
+        .inv-quote { border-left: 4px solid var(--bc-green); padding: 0.2rem 0 0.2rem 1rem; font-size: 0.95rem; color: #374151; font-style: italic; }
+        .inv-quote cite { display: block; font-style: normal; font-size: 0.8rem; font-weight: 700; color: var(--bc-energy-blue); margin-top: 0.3rem; }
+        .invoice { border: 1px solid #e5e7eb; border-radius: 14px; overflow: hidden; box-shadow: var(--box-shadow); }
+        .inv-head { background: linear-gradient(135deg, var(--bc-navy), #0d2f5c); color: #fff; padding: 1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .inv-head h4 { color: #fff; margin: 0; font-size: 1.1rem; }
+        .inv-head p { margin: 0.15rem 0 0; font-size: 0.8rem; opacity: 0.75; }
+        .inv-row { display: grid; grid-template-columns: 3rem 1fr auto auto; gap: 1rem; align-items: center; padding: 0.85rem 1.4rem; border-top: 1px solid #eef0f2; font-size: 0.9rem; }
+        .inv-row.th { border-top: none; background: var(--bc-light-grey); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7280; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+        .inv-row .q { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--bc-energy-blue); }
+        .inv-row .d strong { display: block; color: var(--bc-navy); }
+        .inv-row .d span { font-size: 0.8rem; color: #6b7280; }
+        .inv-row .u, .inv-row .t { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+        .inv-row .u s { color: #9ca3af; font-size: 0.78rem; margin-right: 0.3rem; }
+        .inv-row .t { font-weight: 700; color: var(--bc-navy); min-width: 6.5rem; }
+        .inv-total { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; padding: 1.1rem 1.4rem; background: #f5fdf9; border-top: 2px solid var(--bc-green); }
+        .inv-total .lab { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #0b7a45; }
+        .inv-total .amt { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 2rem; color: var(--bc-navy); line-height: 1; }
+        .inv-total .amt small { font-size: 0.85rem; color: #6b7280; font-weight: 600; }
+        .inv-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: var(--spacing-6); }
+        .btn-navy { background: var(--bc-navy); color: #fff; border-color: var(--bc-navy); display: inline-flex; align-items: center; gap: 0.45rem; }
+        .btn-navy .msi { color: var(--bc-green); font-size: 20px; }
+        .btn-navy:hover { background: #0d2f5c; text-decoration: none; }
+
+        .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-4); margin-top: var(--spacing-8); }
+        .faq { background: var(--bc-light-grey); border-radius: 12px; padding: 1rem 1.2rem; }
+        .faq h5 { font-family: 'Roboto Flex', sans-serif; font-size: 0.98rem; color: var(--bc-navy); margin-bottom: 0.35rem; display: flex; gap: 0.45rem; align-items: center; }
+        .faq h5 .msi { font-size: 19px; color: var(--bc-energy-blue); }
+        .faq p { font-size: 0.87rem; line-height: 1.5; color: #374151; }
+
+        .contact-strip { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: var(--spacing-8); padding-top: var(--spacing-6); border-top: 1px solid #e5e7eb; }
+        .contact-strip .who { font-weight: 800; color: var(--bc-navy); font-family: 'Roboto Flex', sans-serif; font-size: 1.05rem; }
+        .contact-strip .who span { display: block; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.8rem; color: #6b7280; }
+        .contact-strip a { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; font-size: 0.9rem; background: #eaf4ff; padding: 0.45rem 0.9rem; border-radius: 9999px; }
+        .contact-strip a .msi { font-size: 18px; }
+        .contact-strip a:hover { text-decoration: none; background: #d6eaff; }
+
+        @media (max-width: 1024px) {
+            .stack-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .keep-strip { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .inv-intro { grid-template-columns: 1fr; }
+            .inv-row { grid-template-columns: 2.2rem 1fr auto; }
+            .inv-row .u { display: none; }
+            .inv-row.th .u { display: none; }
+        }
+        @media (max-width: 560px) { .stack-grid { grid-template-columns: 1fr 1fr; } }
+
+        /* ===== Restructure ===== */
+        #heard { background-color: var(--bc-white); }
+        #case-studies { background-color: var(--bc-light-grey); }
+        #journey { background-color: var(--bc-white); }
+        #features { background-color: var(--bc-light-grey); }
+        #investment { background-color: var(--bc-white); }
+        #investment .next-steps-card { box-shadow: 0 20px 50px rgba(10,34,64,0.12); border: 1px solid #e5e7eb; border-top: 6px solid var(--bc-energy-blue); }
+        .brief-band.light { margin: 0 auto var(--spacing-8); max-width: none; }
+        .brief-band.light .brief-card { background: linear-gradient(150deg, var(--bc-navy), #0d2f5c); border-color: transparent; box-shadow: var(--box-shadow); }
+        .systems-wrap { margin-top: var(--spacing-16); }
+        .systems-title { text-align: center; font-size: 1.6rem; margin-bottom: var(--spacing-6); }
+        .systems-wrap .stack-card { background: var(--bc-white); }
+    
+        /* ===== Priority Pumps additions ===== */
+        #heard { background-color: var(--bc-white); }
+        #reports { background-color: var(--bc-light-grey); }
+        #journey { background-color: var(--bc-white); }
+        #ai { background-color: var(--bc-white); }
+        #case-studies { background-color: var(--bc-light-grey); }
+        #features { background-color: var(--bc-white); }
+        #investment { background-color: var(--bc-light-grey); }
+        #investment .next-steps-card { box-shadow: 0 20px 50px rgba(10,34,64,0.12); border: 1px solid #e5e7eb; border-top: 6px solid var(--bc-energy-blue); }
+
+        .pp-wordmark { font-family: 'Roboto Flex', sans-serif; font-weight: 800; color: var(--bc-navy); letter-spacing: -0.01em; line-height: 1; }
+        .pp-wordmark b { color: var(--bc-energy-blue); font-weight: 800; }
+        #sticky-nav .pp-chip { background: #fff; border-radius: 6px; padding: 4px 8px; display: inline-flex; align-items: center; font-size: 0.9rem; }
+
+        .brief-card .n { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.7rem; line-height: 1.1; color: var(--bc-white); margin-bottom: 0.2rem; }
+
+        /* Recording fallback */
+        .video-pending { display: none; border: 1px dashed rgba(255,255,255,0.35); border-radius: var(--border-radius); padding: 2.2rem 1.6rem; text-align: center; background: rgba(255,255,255,0.05); }
+        .video-pending .msi { font-size: 40px; color: var(--bc-green); display: block; margin: 0 auto 0.6rem; }
+        .video-pending p { font-size: 0.95rem; opacity: 0.9; }
+
+        /* Three sticking points */
+        .sticking { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); margin-bottom: var(--spacing-8); }
+        .stick-card { background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); padding: 1.3rem 1.4rem; box-shadow: var(--box-shadow); border-top: 4px solid var(--bc-orange); }
+        .stick-card .sn { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #b45309; }
+        .stick-card h3 { font-size: 1.15rem; margin: 0.25rem 0 0.35rem; }
+        .stick-card p { font-size: 0.88rem; color: #374151; line-height: 1.5; }
+        .quote-pair .discovery-quote blockquote { font-size: 1.1rem; }
+
+        /* Fit chips */
+        .fit { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35rem 0.8rem; border-radius: 9999px; white-space: nowrap; }
+        .fit .msi { font-size: 16px; }
+        .fit.std { background: #e9fbf1; color: #0b7a45; }
+        .fit.cfg { background: #eaf4ff; color: var(--bc-energy-blue); }
+        .fit.prove { background: #fff4e5; color: #b45309; }
+        .fit-legend { display: flex; justify-content: center; gap: 0.6rem 1.2rem; flex-wrap: wrap; margin: -1.4rem 0 var(--spacing-8); }
+        .fit-legend span.txt { font-size: 0.82rem; color: #6b7280; }
+        .j-step .j-fitdot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+        .j-fitdot.std { background: var(--bc-green); }
+        .j-fitdot.cfg { background: var(--bc-energy-blue); }
+        .j-fitdot.prove { background: var(--bc-orange); }
+        .j-steps.eight { grid-template-columns: repeat(8, 1fr); }
+        .j-steps.eight .j-track { left: calc(1.2rem + 6.25%); right: calc(1.2rem + 6.25%); }
+        .j-honest { margin: 1.1rem 0 0; background: #fff8ef; border: 1px solid #fcd9b0; border-radius: 10px; padding: 0.8rem 1.1rem; font-size: 0.9rem; color: var(--bc-navy); display: flex; gap: 0.5rem; align-items: flex-start; }
+        .j-honest .msi { font-size: 19px; color: #b45309; flex-shrink: 0; margin-top: 1px; }
+        .j-col.wh h4 .msi { color: #b45309; }
+        .j-col.wh li::before { background: var(--bc-orange); }
+
+        /* Report builder */
+        .rb { display: grid; grid-template-columns: 1fr 1.05fr; gap: var(--spacing-8); align-items: start; }
+        .rb > * { min-width: 0; }
+        .rb-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bc-energy-blue); margin: 0 0 0.6rem; display: flex; align-items: center; gap: 0.4rem; }
+        .rb-label .msi { font-size: 18px; }
+        .rb-opts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--spacing-6); }
+        .rb-opt { font-family: inherit; display: inline-flex; align-items: center; gap: 0.4rem; background: var(--bc-white); border: 2px solid #e5e7eb; border-radius: 9999px; padding: 0.5rem 1rem; font-weight: 700; font-size: 0.88rem; color: var(--bc-navy); cursor: pointer; transition: all .2s; }
+        .rb-opt .msi { font-size: 18px; color: var(--bc-energy-blue); }
+        .rb-opt:hover { border-color: #9cc9ef; }
+        .rb-opt.active { background: var(--bc-navy); border-color: var(--bc-navy); color: #fff; }
+        .rb-opt.active .msi { color: var(--bc-green); }
+        .rb-opt:focus-visible { outline: 3px solid var(--bc-green); outline-offset: 2px; }
+        .rb-rules { list-style: none; margin-top: var(--spacing-2); }
+        .rb-rules li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.92rem; line-height: 1.5; margin-bottom: 0.75rem; color: #374151; }
+        .rb-rules li .msi { font-size: 20px; color: #0b7a45; flex-shrink: 0; margin-top: 1px; }
+        .rb-rules li strong { color: var(--bc-navy); }
+        .rb-sheet { background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: 18px; box-shadow: 0 20px 50px rgba(10,34,64,0.12); overflow: hidden; }
+        .rb-sheet-head { background: linear-gradient(135deg, var(--bc-navy), #0d2f5c); color: #fff; padding: 1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+        .rb-sheet-head h4 { color: #fff; margin: 0; font-size: 1.05rem; }
+        .rb-sheet-head p { margin: 0.1rem 0 0; font-size: 0.78rem; opacity: 0.75; }
+        .rb-body { padding: 1rem 1.4rem 1.3rem; transition: opacity .25s ease; }
+        .rb-sec { border-bottom: 1px solid #eef0f2; padding: 0.75rem 0; }
+        .rb-sec:last-child { border-bottom: none; }
+        .rb-sec h5 { font-family: 'Roboto Flex', sans-serif; font-size: 0.86rem; color: var(--bc-navy); display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.45rem; }
+        .rb-sec h5 .msi { font-size: 18px; }
+        .rb-sec h5 small { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.72rem; color: #6b7280; margin-left: auto; }
+        .rb-fields { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .rb-f { font-size: 0.78rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid; }
+        .rb-f.pre { background: #eaf4ff; border-color: #cfe5f8; color: #0b4f8f; }
+        .rb-f.fresh { background: #fff7f0; border-color: #fcd9b0; color: #92400e; }
+        .rb-f.free { background: #f3f4f6; border-color: #e5e7eb; color: #374151; }
+        .rb-f.job { background: #f0fdf6; border-color: #b9f3d6; color: #0b6b3d; }
+        .rb-sec.pre h5 .msi { color: var(--bc-energy-blue); }
+        .rb-sec.fresh h5 .msi { color: #b45309; }
+        .rb-sec.job h5 .msi { color: #0b7a45; }
+        .rb-sec.free h5 .msi { color: #6b7280; }
+        .rb-foot { font-size: 0.78rem; color: #6b7280; margin-top: 0.8rem; text-align: center; }
+
+        /* Migration timeline (dark band) */
+        #migration { background: linear-gradient(150deg, var(--bc-navy) 0%, #0d2f5c 60%, #0a4a8f 100%); color: var(--bc-white); position: relative; overflow: hidden; }
+        #migration::before { content: ''; position: absolute; top: -140px; left: -120px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(0,114,206,0.28) 0%, transparent 70%); pointer-events: none; }
+        #migration .container { position: relative; z-index: 1; }
+        #migration .section-title h2, #migration .section-title p { color: var(--bc-white); }
+        #migration .section-title p { opacity: 0.9; }
+        #migration .eyebrow { color: var(--bc-green); }
+        .tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-4); position: relative; }
+        .tl::before { content: ''; position: absolute; top: 27px; left: 12%; right: 12%; height: 3px; background: linear-gradient(90deg, rgba(40,226,137,0.25), var(--bc-green)); border-radius: 3px; }
+        .tl-step { position: relative; z-index: 1; }
+        .tl-dot { width: 56px; height: 56px; border-radius: 50%; background: var(--bc-navy); border: 3px solid var(--bc-green); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.9rem; }
+        .tl-dot .msi { font-size: 26px; color: var(--bc-green); }
+        .tl-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--border-radius); padding: 1.1rem 1.2rem; height: calc(100% - 70px); }
+        .tl-when { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bc-green); }
+        .tl-card h3 { color: #fff; font-size: 1.1rem; margin: 0.2rem 0 0.5rem; }
+        .tl-card ul { list-style: none; }
+        .tl-card li { position: relative; padding-left: 1.1rem; font-size: 0.86rem; line-height: 1.45; margin-bottom: 0.45rem; color: rgba(255,255,255,0.9); }
+        .tl-card li::before { content: ''; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--bc-green); }
+        .mig-promise { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); margin-top: var(--spacing-8); }
+        .mp { display: flex; gap: 0.8rem; align-items: flex-start; background: rgba(40,226,137,0.08); border: 1px solid rgba(40,226,137,0.35); border-radius: 12px; padding: 1rem 1.1rem; }
+        .mp .msi { font-size: 26px; color: var(--bc-green); }
+        .mp h4 { color: #fff; font-size: 0.98rem; margin: 0 0 0.2rem; }
+        .mp p { font-size: 0.84rem; color: rgba(255,255,255,0.85); line-height: 1.45; }
+        .mig-honest { display: flex; align-items: flex-start; gap: 0.6rem; margin: var(--spacing-6) auto 0; background-color: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 10px; padding: 0.9rem 1.2rem; font-size: 0.9rem; color: #fff; }
+        .mig-honest .msi { font-size: 20px; color: var(--bc-green); flex-shrink: 0; margin-top: 1px; }
+
+        /* AI */
+        .ai-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-6); }
+        .ai-col h3 { font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; margin-bottom: var(--spacing-4); }
+        .ai-col h3 .tag { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 9999px; }
+        .ai-col h3 .tag.now { background: #e9fbf1; color: #0b7a45; }
+        .ai-col h3 .tag.next { background: #f3f0ff; color: #5b3fc4; }
+        .ai-card { display: grid; grid-template-columns: 46px 1fr; gap: 0.9rem; align-items: start; background: var(--bc-white); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.1rem; box-shadow: var(--box-shadow); margin-bottom: var(--spacing-4); }
+        .ai-card .ai-ic { width: 46px; height: 46px; border-radius: 12px; background: #eaf4ff; display: flex; align-items: center; justify-content: center; }
+        .ai-card .ai-ic .msi { font-size: 24px; color: var(--bc-energy-blue); }
+        .ai-col.next .ai-card .ai-ic { background: #f3f0ff; }
+        .ai-col.next .ai-card .ai-ic .msi { color: #5b3fc4; }
+        .ai-card h4 { font-size: 1rem; margin: 0 0 0.2rem; }
+        .ai-card p { font-size: 0.86rem; color: #374151; line-height: 1.5; }
+        .ai-card p em { font-style: normal; font-weight: 700; color: var(--bc-navy); }
+
+        /* Proposed dates */
+        .date-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); margin: var(--spacing-6) 0; }
+        .date-card { border: 2px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.1rem; text-align: center; transition: all .2s; }
+        .date-card:hover { border-color: var(--bc-energy-blue); }
+        .date-card .dd { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bc-energy-blue); }
+        .date-card .dn { font-family: 'Roboto Flex', sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--bc-navy); line-height: 1.15; }
+        .date-card .dt { font-size: 0.86rem; color: #6b7280; }
+        .date-card a { display: inline-block; margin-top: 0.6rem; font-size: 0.82rem; font-weight: 700; }
+        .need-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.4rem; list-style: none; }
+        .need-grid li { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.9rem; line-height: 1.45; }
+        .need-grid li .msi { font-size: 19px; color: var(--bc-energy-blue); flex-shrink: 0; margin-top: 1px; }
+
+        @media (max-width: 1024px) {
+            .sticking { grid-template-columns: 1fr; }
+            .rb { grid-template-columns: 1fr; }
+            .tl { grid-template-columns: repeat(2, 1fr); row-gap: var(--spacing-6); }
+            .tl::before { display: none; }
+            .mig-promise { grid-template-columns: 1fr; }
+            .j-steps.eight { grid-template-columns: repeat(4, 1fr); row-gap: 1.2rem; }
+        }
+        @media (max-width: 768px) {
+            .ai-split { grid-template-columns: 1fr; }
+            .tl { grid-template-columns: 1fr; }
+            .tl-card { height: auto; }
+            .date-grid { grid-template-columns: 1fr; }
+            .need-grid { grid-template-columns: 1fr; }
+            .j-steps.eight { grid-template-columns: repeat(2, 1fr); }
+        }
+        .confirm-box .need-grid li { padding-left: 0; margin-bottom: 0; }
+        .confirm-box .need-grid li::before { display: none; }
+
+        /* ===== v2: hover feedback ===== */
+        .stick-card, .compare, .tl-card, .sp, .date-card, .faq, .j-col, .rb-sheet, #feature-display, .invoice, .need-grid li, .lp-note, .j-honest { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease; }
+        .stick-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(10,34,64,0.16); }
+        .compare:hover { box-shadow: 0 18px 40px rgba(10,34,64,0.14); }
+        .compare-row { transition: background-color .2s ease; }
+        .compare-row:hover .cc-current { background-color: #ffeedd; }
+        .compare-row:hover .cc-fix { background-color: #e6faef; }
+        .j-col:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(10,34,64,0.12); border-color: #cfe5f8; }
+        .rb-sheet:hover { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(10,34,64,0.18); }
+        #feature-display:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(10,34,64,0.14); }
+        .tl-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.11); border-color: rgba(40,226,137,0.6); box-shadow: 0 18px 40px rgba(0,0,0,0.3); }
+        .sp:hover { transform: translateY(-4px); background: #fff; box-shadow: 0 14px 30px rgba(10,34,64,0.14); border-color: #cfe5f8; }
+        .date-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(10,34,64,0.16); background: #f7fbff; }
+        .faq:hover { transform: translateY(-4px); background: #fff; box-shadow: 0 14px 30px rgba(10,34,64,0.12); }
+        .invoice:hover { box-shadow: 0 20px 44px rgba(10,34,64,0.16); }
+        .need-grid li:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(10,34,64,0.12); border-color: var(--bc-energy-blue); }
+        .ai-card, .rb-opt, .line-tab { will-change: transform; }
+        .rb-opt:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(10,34,64,0.12); }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,0.18); }
+        .contact-strip a { transition: transform .2s, background-color .2s; }
+        .contact-strip a:hover { transform: translateY(-2px); }
+
+        /* ===== v2: migration support ===== */
+        .tl-card { display: flex; flex-direction: column; }
+        .tl-card ul { flex: 1; }
+        .tl-who { display: flex; gap: 0.5rem; align-items: flex-start; margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid rgba(255,255,255,0.14); font-size: 0.82rem; color: #fff; line-height: 1.4; }
+        .tl-who .msi { font-size: 18px; color: var(--bc-green); margin-top: 1px; }
+        .tl-who strong { color: var(--bc-green); }
+        .support-panel { margin-top: var(--spacing-12); background: var(--bc-white); color: var(--bc-charcoal); border-radius: 18px; padding: var(--spacing-8); box-shadow: 0 24px 60px rgba(0,0,0,0.3); border-top: 6px solid var(--bc-green); }
+        .support-panel > h3 { display: flex; align-items: center; gap: 0.6rem; font-size: 1.5rem; margin-bottom: var(--spacing-6); }
+        .support-panel > h3 .msi { font-size: 30px; color: #0b7a45; }
+        .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); }
+        .sp { display: grid; grid-template-columns: 44px 1fr; gap: 0.8rem; align-items: start; background: var(--bc-light-grey); border: 1px solid transparent; border-radius: 12px; padding: 1rem 1.1rem; }
+        .sp > .msi { width: 44px; height: 44px; border-radius: 12px; background: #e9fbf1; color: #0b7a45; font-size: 24px; display: flex; align-items: center; justify-content: center; overflow: visible; }
+        .sp h4 { font-size: 0.98rem; margin: 0 0 0.25rem; }
+        .sp p { font-size: 0.85rem; color: #374151; line-height: 1.45; }
+
+        /* ===== v2: what would help us build it ===== */
+        .need-box { margin-top: var(--spacing-8); background: linear-gradient(150deg, #eaf4ff 0%, #f0fdf6 100%); border: 2px solid var(--bc-energy-blue); border-radius: 16px; padding: var(--spacing-6) var(--spacing-6) var(--spacing-6); box-shadow: 0 14px 34px rgba(0,114,206,0.15); position: relative; }
+        .need-head { display: grid; grid-template-columns: 56px 1fr; gap: 1rem; align-items: start; margin-bottom: var(--spacing-6); }
+        .need-ic { width: 56px; height: 56px; border-radius: 14px; background: var(--bc-energy-blue); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(0,114,206,0.35); }
+        .need-ic .msi { font-size: 30px; color: #fff; }
+        .need-tag { display: inline-block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; background: var(--bc-orange); padding: 0.2rem 0.6rem; border-radius: 9999px; margin-bottom: 0.35rem; }
+        .need-head h4 { font-size: 1.45rem; margin: 0 0 0.3rem; }
+        .need-head p { font-size: 0.95rem; color: #374151; }
+        .need-box .need-grid { gap: 0.7rem; }
+        .need-box .need-grid li { background: #fff; border: 1px solid #cfe5f8; border-radius: 10px; padding: 0.75rem 0.9rem; font-size: 0.92rem; }
+        .need-box .need-grid li strong { color: var(--bc-navy); }
+
+        @media (max-width: 1024px) { .support-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .support-grid { grid-template-columns: 1fr; } .support-panel { padding: var(--spacing-6); } .need-head { grid-template-columns: 1fr; } }
+        @media (hover: none) { .stick-card:hover, .tl-card:hover, .sp:hover, .date-card:hover, .faq:hover, .j-col:hover, .rb-sheet:hover, #feature-display:hover, .need-grid li:hover { transform: none; } }
+    </style>
+</head>
+<body>
+    <nav id="sticky-nav">
+        <div class="container">
+            <div class="nav-brand" style="display:flex; align-items:center; gap:0.7rem;">
+                <img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange Logo">
+                <span style="color:rgba(255,255,255,0.45); font-weight:700;">+</span>
+                <span class="pp-chip"><img src="https://images.squarespace-cdn.com/content/v1/66f40d66337a661b9432a192/3ba60ec2-7137-4d12-bb2d-52025d05ca64/Original+on+transparent.png" alt="Priority Pumps Logo" style="height:24px; display:block;" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='inline';"><span class="pp-wordmark" style="display:none;">Priority <b>Pumps</b></span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#heard">What we heard</a>
+                <a href="#case-studies">Proof</a>
+                <a href="#journey">End to end</a>
+                <a href="#reports">Reports</a>
+                <a href="#migration">Moving across</a>
+                <a href="#next-steps">Dates</a>
+                <a href="#investment" class="nav-cta">Investment</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-split">
+                    <div class="hero-copy">
+                        <div class="hero-pill"><span class="live-dot"></span> Prepared for James, Bailey &amp; the Priority Pumps team</div>
+                        <h1>Quote accepted. Parts bought, picked and on the bay. Report out the same day. <span class="hero-accent">One system, built around how you work.</span></h1>
+                        <p class="subhead">Right now a converted job means parts allocated before anyone knows where they&rsquo;re coming from, a printed quote in the warehouse and reports that need an afternoon of office edits. This page recaps our session, shows businesses like yours already running on BigChange, and sets out what we&rsquo;ll build and show you at your offices.</p>
+                        <div class="cta-buttons">
+                            <a href="#journey" class="btn btn-primary">See the end-to-end plan</a>
+                            <a href="#case-studies" class="btn btn-secondary">See who&rsquo;s done it</a>
+                        </div>
+                    </div>
+                    <div class="hero-video">
+                        <h4><span class="msi">play_circle</span> Watch our session again</h4>
+                        <div class="video-container" id="rec-frame">
+                            <iframe data-src="https://copilot.clari.com/guest/sharedCall/6af73217857dd3da7b70d406?callId=7b7a03b2-122f-4a75-92fa-b98ccd6d82ba&amp;callTitle=BigChange%20Demonstration%20for%20Priority%20Pumps" title="BigChange session with Priority Pumps" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe>
+                        </div>
+                        <div class="video-pending" id="rec-pending">
+                            <span class="msi">videocam</span>
+                            <p>The recording of our session is on its way. Emilio will send the link over separately.</p>
+                        </div>
+                        <details class="chapters">
+                            <summary>What&rsquo;s in the recording <span class="msi">expand_more</span></summary>
+                            <ol>
+                                <li><b>00:12</b> How detailed reports need to be</li>
+                                <li><b>02:01</b> JobLogic today and the warehouse gap</li>
+                                <li><b>05:49</b> One report, five job types</li>
+                                <li><b>08:39</b> Why the reporting matters</li>
+                                <li><b>10:52</b> Enquiry to invoice: what you need</li>
+                                <li><b>13:07</b> Quotes, bills of materials and rates</li>
+                                <li><b>14:56</b> Conversion and purchasing</li>
+                                <li><b>16:39</b> Picking, stock and min/max</li>
+                                <li><b>18:32</b> Keeping engineers&rsquo; devices in sync</li>
+                                <li><b>19:18</b> &ldquo;On our way&rdquo; and arrival messages</li>
+                                <li><b>19:55</b> Asset profiles and pre-filled reports</li>
+                                <li><b>23:55</b> PPM contracts and quote types</li>
+                                <li><b>24:23</b> Templates you edit yourselves</li>
+                                <li><b>25:41</b> Supplier imports and preferred suppliers</li>
+                                <li><b>30:14</b> Returns and warranty stock</li>
+                                <li><b>36:35</b> Stock locations and the three sticking points</li>
+                                <li><b>39:35</b> Vehicle tracking and geofences</li>
+                                <li><b>41:40</b> Sales opportunities as your CRM</li>
+                                <li><b>42:33</b> Predefined items and sets</li>
+                                <li><b>43:24</b> Price lists by brand</li>
+                                <li><b>50:19</b> Automatic quote follow-ups</li>
+                                <li><b>52:53</b> Moving across without downtime</li>
+                                <li><b>57:30</b> Pricing</li>
+                                <li><b>01:01:38</b> AI and what&rsquo;s coming</li>
+                            </ol>
+                            <p class="ch-note">Times are approximate. Scrub to them in the player.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="heard">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">What we heard</span>
+                    <h2>Three sticking points, in your words</h2>
+                    <p>You started on JobLogic when it was one or two of you. Now it&rsquo;s ten people, a warehouse and a sales function, and whatever comes next has to last &ldquo;the next 10, 20 years.&rdquo;</p>
+                </div>
+
+                <div class="sticking">
+                    <div class="stick-card">
+                        <span class="sn">Sticking point 1</span>
+                        <h3>Managing prospects</h3>
+                        <p>No CRM today. A new sales and business development manager is starting, and you were looking at Pipedrive.</p>
+                    </div>
+                    <div class="stick-card">
+                        <span class="sn">Sticking point 2</span>
+                        <h3>Converting jobs with parts</h3>
+                        <p>&ldquo;The information handover and the allocation of parts&hellip; that&rsquo;s a nightmare at the moment.&rdquo;</p>
+                    </div>
+                    <div class="stick-card">
+                        <span class="sn">Sticking point 3</span>
+                        <h3>Reporting</h3>
+                        <p>Engineers aren&rsquo;t completing reports on the app. A Google Sheet is the stopgap, and it needs amending every time.</p>
+                    </div>
+                </div>
+
+                <div class="compare">
+                    <div class="compare-head">
+                        <div class="ch-current"><span class="msi">warning</span> Today</div>
+                        <div class="ch-fix"><span class="msi">bolt</span> With BigChange</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>No CRM.</strong> Prospects, calls and follow-ups live in inboxes and heads.</div>
+                        <div class="cc-fix"><strong>Sales opportunities hold the contact, notes, quotes and every job that follows,</strong> with <mark class="hl-g">automatic follow-up reminders</mark>.</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>Converting an order forces a choice:</strong> allocate from stock or buy now, before anyone knows the supplier.</div>
+                        <div class="cc-fix"><strong>The accepted quote drives what needs buying,</strong> and the job <mark class="hl-g">can&rsquo;t be booked until the parts are in</mark>.</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>Picking from a printed quotation,</strong> prices showing, left lying in the warehouse.</div>
+                        <div class="cc-fix"><strong>A pick list built from the job&rsquo;s bill of materials,</strong> <mark class="hl-g">no prices, with the bay location</mark>.</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>Reports re-edited in the office.</strong> What should take an hour takes until the end of the day.</div>
+                        <div class="cc-fix"><strong>The report is finished on site, on your template,</strong> and <mark class="hl-g">goes to the client on completion</mark>.</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>Move a job and someone has to press &ldquo;reallocate&rdquo;,</strong> or the change never reaches the engineer.</div>
+                        <div class="cc-fix"><strong>The engineer&rsquo;s device stays in sync</strong> with every change, <mark class="hl-g">no button to forget</mark>.</div>
+                    </div>
+                    <div class="compare-row">
+                        <div class="cc-current"><strong>Every change to JobLogic is a paid request</strong> and a wait.</div>
+                        <div class="cc-fix"><strong>You edit your own reports, quotes and invoices</strong> in a <mark class="hl-g">Microsoft Word add-in</mark>, whenever you like.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">Already doing it on BigChange</span>
+                    <h2>Pump and wastewater engineers already on BigChange</h2>
+                    <p>Pumping stations, treatment plants and pump stock. Same assets, same pressures.</p>
+                </div>
+                <div class="cs-grid">
+                    <div class="cs-card">
+                        <div class="cs-thumb">
+                            <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9cd9306de5ac89068c3b5_H2O.jpeg" alt="H2O FlowTech engineers" onerror="this.onerror=null; this.style.display='none'; this.parentElement.classList.add('noimg');">
+                            <div class="cs-thumb-overlay">
+                                <span class="cs-logo-chip">
+                                    <img src="https://static.wixstatic.com/media/2d29cf_0733b028be8345338858b23dee2c2d60~mv2.jpg/v1/fill/w_280,h_294,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/H2o%20Flowtech%20Logo%20original.jpg" alt="H2O FlowTech Logo" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                                    <span class="cs-logo-fallback" style="display:none;">H2O FlowTech</span>
+                                </span>
+                                <span class="cs-industry">Pumps, pumping stations &amp; STPs</span>
+                            </div>
+                        </div>
+                        <div class="cs-body">
+                            <div class="cs-stats">
+                                <div class="cs-stat"><div class="n">600+</div><div class="l">Pumping stations looked after</div></div>
+                                <div class="cs-stat"><div class="n">0</div><div class="l">Paper forms</div></div>
+                                <div class="cs-stat"><div class="n">1</div><div class="l">History per site</div></div>
+                            </div>
+                            <div class="cs-why">Why it&rsquo;s relevant</div>
+                            <div class="cs-quote">The closest to your world: installing, maintaining and repairing pumps, pumping stations and sewage treatment plants. Every paper form went digital, site photos go into customer reports, and engineers see past work at each site. Finance syncs to their accounts package. &ldquo;Our largely paper based system was cumbersome and slow.&rdquo;</div>
+                            <div class="cs-who">Mick Brindle<span>Director, H2O FlowTech</span></div>
+                            <a href="https://www.bigchange.com/case-study/bigchange-technology-transforms-h2o-flowtechs-mobile-engineer-services" target="_blank" rel="noopener" class="cs-link">Read the case study &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="cs-card">
+                        <div class="cs-thumb">
+                            <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9cccad679100f13b1094c_Europump.jpeg" alt="Europump engineer" onerror="this.onerror=null; this.style.display='none'; this.parentElement.classList.add('noimg');">
+                            <div class="cs-thumb-overlay">
+                                <span class="cs-logo-chip">
+                                    <img src="https://www.watermagazine.co.uk/wp-content/uploads/2023/11/europump-logo-1.png" alt="Europump Logo" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                                    <span class="cs-logo-fallback" style="display:none;">Europump</span>
+                                </span>
+                                <span class="cs-industry">Pump maintenance &middot; stock</span>
+                            </div>
+                        </div>
+                        <div class="cs-body">
+                            <div class="cs-stats">
+                                <div class="cs-stat"><div class="n">10&times;</div><div class="l">First-time fix</div></div>
+                                <div class="cs-stat"><div class="n">&pound;100k</div><div class="l">Expected yearly benefit</div></div>
+                                <div class="cs-stat"><div class="n">Auto</div><div class="l">Stock reordering</div></div>
+                            </div>
+                            <div class="cs-why">Why it&rsquo;s relevant</div>
+                            <div class="cs-quote">Your stock problem, solved: the stock module orders and replenishes parts automatically, so vans stay stocked and return visits have virtually gone. &ldquo;With this automated stock management capability on BigChange we have completely transformed our business.&rdquo;</div>
+                            <div class="cs-who">Jack Aplin<span>Director, Eurotank (Europump&rsquo;s parent)</span></div>
+                            <a href="https://www.bigchange.com/case-study/bigchange-mobile-tech-gives-europumps-commercial-transport-business-a-100k-boost" target="_blank" rel="noopener" class="cs-link">Read the case study &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="cs-card">
+                        <div class="cs-thumb">
+                            <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67da711a12dc69b7964a017a_Utopia.png" alt="MW Waste" onerror="this.onerror=null; this.style.display='none'; this.parentElement.classList.add('noimg');">
+                            <div class="cs-thumb-overlay">
+                                <span class="cs-logo-chip">
+                                    <img src="https://www.mwwaste.co.uk/media/1182/mwwaste_logo_rgb.png" alt="MW Waste Logo" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                                    <span class="cs-logo-fallback" style="display:none;">MW Waste</span>
+                                </span>
+                                <span class="cs-industry">Wastewater &middot; pumping stations</span>
+                            </div>
+                        </div>
+                        <div class="cs-body">
+                            <div class="cs-stats">
+                                <div class="cs-stat"><div class="n">&pound;50k</div><div class="l">Saved a year</div></div>
+                                <div class="cs-stat"><div class="n">24/7</div><div class="l">Emergency ops in view</div></div>
+                                <div class="cs-stat"><div class="n">ISO</div><div class="l">9001 &amp; 14001 achieved</div></div>
+                            </div>
+                            <div class="cs-why">Why it&rsquo;s relevant</div>
+                            <div class="cs-quote">Wastewater engineers fixing pumping station equipment for Yorkshire Water and Severn Trent. Worksheets are customised per client, with standardised drop-down lists so the data comes back consistent: the report standard you described. &ldquo;It has completely revolutionised the business.&rdquo;</div>
+                            <div class="cs-who">Keith Chadwick<span>Managing Director, MW Waste</span></div>
+                            <a href="https://www.bigchange.com/case-study/bigchange-unplugs-big-savings-for-yorkshires-mw-waste" target="_blank" rel="noopener" class="cs-link">Read the case study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">What we&rsquo;ll build and show you</span>
+                    <h2>Your process, enquiry to invoice</h2>
+                    <p>Your workflow as you described it, and the run-through Danielle and I will build and bring to your offices. Click through each stage. We&rsquo;ve been straight about where BigChange does it out of the box, and where we need to prove it with your data.</p>
+                </div>
+                <div class="fit-legend">
+                    <span class="fit std"><span class="msi">check_circle</span> Standard</span>
+                    <span class="fit cfg"><span class="msi">tune</span> Set up for you</span>
+                    <span class="fit prove"><span class="msi">science</span> We&rsquo;ll prove it</span>
+                </div>
+
+                <div class="journey">
+                    <div class="j-banner">
+                        <div>
+                            <h3>Enquiry &rarr; quote &rarr; convert &rarr; buy &rarr; pick &rarr; book &rarr; report &rarr; invoice</h3>
+                            <p>All held in one sales opportunity, from the first call to jobs years later.</p>
+                        </div>
+                        <span class="lp-chip">Cradle to grave</span>
+                    </div>
+                    <ol class="j-steps eight" id="j-steps" role="tablist" aria-label="Process stages">
+                        <li class="j-track" aria-hidden="true"><span id="j-track-fill"></span></li>
+                    </ol>
+                    <div class="j-panel">
+                        <div class="j-panel-inner" id="j-panel" role="tabpanel" aria-live="polite"></div>
+                        <div class="j-nav">
+                            <button type="button" class="j-btn" id="j-prev"><span class="msi">arrow_back</span> Back</button>
+                            <span class="j-count" id="j-count"></span>
+                            <button type="button" class="j-btn next" id="j-next">Next stage <span class="msi">arrow_forward</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reports">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">Up close: the on-site report</span>
+                    <h2>One report that asks the right questions</h2>
+                    <p>The engineer picks the job type, then the asset. The report opens only what matters for that combination. Fixed details pull through from the asset; condition questions stay blank so they get thought about.</p>
+                </div>
+
+                <div class="rb">
+                    <div>
+                        <p class="rb-label"><span class="msi">looks_one</span> What type of job is it?</p>
+                        <div class="rb-opts" id="rb-jobs"></div>
+                        <p class="rb-label"><span class="msi">looks_two</span> What asset are you working on?</p>
+                        <div class="rb-opts" id="rb-assets"></div>
+
+                        <ul class="rb-rules">
+                            <li><span class="msi">check_circle</span><span><strong>Drop-downs, yes/no/N/A and satisfactory/unsatisfactory</strong> everywhere except pump specs, serial numbers and engineer notes.</span></li>
+                            <li><span class="msi">check_circle</span><span><strong>Fixed details pre-fill from the asset profile.</strong> If a pump has been swapped, the engineer updates it and the asset record updates too.</span></li>
+                            <li><span class="msi">check_circle</span><span><strong>The previous report is on the device,</strong> but condition answers never carry over.</span></li>
+                            <li><span class="msi">check_circle</span><span><strong>Photos, scanned site documents and the customer&rsquo;s signature</strong> on every report.</span></li>
+                            <li><span class="msi">check_circle</span><span><strong>The PDF uses your own template.</strong> Bailey has built these in BigChange before.</span></li>
+                        </ul>
+                    </div>
+                    <div class="rb-sheet">
+                        <div class="rb-sheet-head">
+                            <div>
+                                <h4 id="rb-title">Service &middot; Pumping station</h4>
+                                <p>What the engineer sees on the app</p>
+                            </div>
+                            <span class="lp-chip">Illustrative</span>
+                        </div>
+                        <div class="rb-body" id="rb-body"></div>
+                    </div>
+                </div>
+                <p class="lines-foot">Question names here are examples. We&rsquo;ll build the real ones from your pumping station report.</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">One platform for office, warehouse and vans</span>
+                    <h2>Everything you listed, in one system</h2>
+                    <p>Click any capability to see what it means for Priority Pumps.</p>
+                </div>
+                <div class="features-layout">
+                    <div id="feature-display">
+                        <div id="feature-display-content"></div>
+                    </div>
+                    <div>
+                        <div id="platform-hub" class="platform-hub-container">
+                            <div class="hub-center"><img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange"></div>
+                        </div>
+                        <div id="feature-tile-grid" class="feature-tile-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="migration">
+            <div class="container">
+                <div class="section-title">
+                    <span class="eyebrow">Moving across from JobLogic</span>
+                    <h2>What a typical move looks like, and who&rsquo;s with you at each step</h2>
+                    <p>Bailey&rsquo;s first question was how to switch without downtime. This is how a move from one system to another usually runs. You keep JobLogic running until BigChange is proven with your own team, and you&rsquo;re supported at every stage.</p>
+                </div>
+
+                <div class="tl">
+                    <div class="tl-step">
+                        <div class="tl-dot"><span class="msi">draw</span></div>
+                        <div class="tl-card">
+                            <span class="tl-when">Typically weeks 1&ndash;2</span>
+                            <h3>Map it</h3>
+                            <ul>
+                                <li>Your workflow mapped out, enquiry to invoice.</li>
+                                <li>You export from JobLogic. We tidy the data and import it for you.</li>
+                            </ul>
+                            <div class="tl-who"><span class="msi">support_agent</span><span><strong>With you:</strong> your dedicated implementation consultant</span></div>
+                        </div>
+                    </div>
+                    <div class="tl-step">
+                        <div class="tl-dot"><span class="msi">construction</span></div>
+                        <div class="tl-card">
+                            <span class="tl-when">Typically weeks 2&ndash;6</span>
+                            <h3>Build it</h3>
+                            <ul>
+                                <li>Job types, reports, quote and invoice templates.</li>
+                                <li>Products, bills of materials, price lists and stock locations.</li>
+                            </ul>
+                            <div class="tl-who"><span class="msi">support_agent</span><span><strong>With you:</strong> the same consultant, around 20 hours one-to-one</span></div>
+                        </div>
+                    </div>
+                    <div class="tl-step">
+                        <div class="tl-dot"><span class="msi">science</span></div>
+                        <div class="tl-card">
+                            <span class="tl-when">Typically weeks 6&ndash;10</span>
+                            <h3>Pilot it</h3>
+                            <ul>
+                                <li>One engineer and a couple of office users go first.</li>
+                                <li>JobLogic keeps running alongside. Whatever the pilot finds gets fixed first.</li>
+                            </ul>
+                            <div class="tl-who"><span class="msi">support_agent</span><span><strong>With you:</strong> your consultant, plus 24/7 UK support</span></div>
+                        </div>
+                    </div>
+                    <div class="tl-step">
+                        <div class="tl-dot"><span class="msi">rocket_launch</span></div>
+                        <div class="tl-card">
+                            <span class="tl-when">Typically weeks 10&ndash;12</span>
+                            <h3>Go live</h3>
+                            <ul>
+                                <li>The whole team moves across and JobLogic is switched off.</li>
+                                <li>Your team trained as super users, so future changes are yours to make.</li>
+                            </ul>
+                            <div class="tl-who"><span class="msi">support_agent</span><span><strong>With you:</strong> a dedicated account manager, plus 24/7 UK support</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-panel">
+                    <h3><span class="msi">verified_user</span> The support you get, start to finish</h3>
+                    <div class="support-grid">
+                        <div class="sp"><span class="msi">person</span><div><h4>A dedicated implementation consultant</h4><p>One named person from kick-off to go-live, who learns how Priority Pumps works.</p></div></div>
+                        <div class="sp"><span class="msi">schedule</span><div><h4>Around 20 hours one-to-one</h4><p>Sessions spread over the first weeks, building BigChange around your process with you.</p></div></div>
+                        <div class="sp"><span class="msi">move_down</span><div><h4>A managed data import</h4><p>Customers, sites, assets and products moved from JobLogic for you. We&rsquo;re also checking whether a new JobLogic migration wizard could do it in under a day.</p></div></div>
+                        <div class="sp"><span class="msi">sync_alt</span><div><h4>A parallel run</h4><p>Typically up to eight weeks on both systems, so there&rsquo;s no day where you can&rsquo;t work.</p></div></div>
+                        <div class="sp"><span class="msi">payments</span><div><h4>No paying for two systems</h4><p>Your first BigChange invoice is deferred three months to cover the overlap.</p></div></div>
+                        <div class="sp"><span class="msi">headset_mic</span><div><h4>After go-live</h4><p>An account manager, and 24/7 support by phone, email or live chat from our UK team.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="investment">
+            <div class="container">
+                <div class="next-steps-card">
+                    <span class="eyebrow">Investment</span>
+                    <h3>Indicative quotation</h3>
+                    <p class="lead">Based on our session. We&rsquo;ll firm it up once we&rsquo;ve shown you Priority Pumps running in BigChange and agreed the user mix.</p>
+
+                    <div class="invoice">
+                        <div class="inv-head">
+                            <div>
+                                <h4>Priority Pumps &middot; 10 users</h4>
+                                <p>Monthly, ex VAT &middot; 36-month term &middot; indicative</p>
+                            </div>
+                        </div>
+                        <div class="inv-row th"><span>Qty</span><span>Item</span><span class="u">Unit</span><span class="t">Monthly</span></div>
+                        <div class="inv-row">
+                            <span class="q">4</span>
+                            <span class="d"><strong>Back-office web users</strong><span>CRM, quoting, purchasing, stock, scheduling, reporting and invoicing</span></span>
+                            <span class="u"><s>&pound;80</s>&pound;57.00</span>
+                            <span class="t">&pound;228.00</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="q">6</span>
+                            <span class="d"><strong>Engineer app with hard-wired vehicle tracking</strong><span>Mobile licence plus tracker, fitting included</span></span>
+                            <span class="u"><s>&pound;80</s>&pound;57.00</span>
+                            <span class="t">&pound;342.00</span>
+                        </div>
+                        <div class="inv-row">
+                            <span class="q">1</span>
+                            <span class="d"><strong>Implementation package</strong><span>Dedicated consultant, ~20 hours one-to-one, managed data import. Spread across the term rather than ~&pound;5k upfront</span></span>
+                            <span class="u">&pound;133.00</span>
+                            <span class="t">&pound;133.00</span>
+                        </div>
+                        <div class="inv-total">
+                            <span class="lab">Indicative monthly total</span>
+                            <span class="amt">&pound;703.00 <small>/ month ex VAT</small></span>
+                        </div>
+                    </div>
+                    <p class="price-note">Quoted separately if you want them: Xero integration, devices (tablets and cradles), the AI upgrade and the JobLogic migration wizard. First invoice deferred three months.</p>
+
+                    <div class="faq-grid">
+                        <div class="faq">
+                            <h5><span class="msi">edit_document</span> Can we change our own templates?</h5>
+                            <p>Yes. Reports, quotes and invoices are built in a Microsoft Word add-in, and job types and worksheets are set up in the back office. No change requests, no fees.</p>
+                        </div>
+                        <div class="faq">
+                            <h5><span class="msi">payments</span> Will we pay for two systems?</h5>
+                            <p>No. Your first invoice is deferred three months to cover the parallel run with JobLogic.</p>
+                        </div>
+                        <div class="faq">
+                            <h5><span class="msi">build</span> Do you charge to fit the trackers?</h5>
+                            <p>No. Tracking and fitting are included in the engineer licence. It&rsquo;s what drives the arrival alerts and &ldquo;on our way&rdquo; messages.</p>
+                        </div>
+                        <div class="faq">
+                            <h5><span class="msi">group_add</span> What if we grow past 10 users?</h5>
+                            <p>Add users as you hire, on the same terms. The new sales and business development manager is already in the 10.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="next-steps">
+            <div class="container">
+                <div class="next-steps-card">
+                    <span class="eyebrow">Next steps</span>
+                    <h3>Your process, live, at your offices</h3>
+                    <p class="lead">Danielle and I will come to you in Kent with Priority Pumps built in BigChange and tablets for the team to try. We&rsquo;ll need at least two hours to go through your process end to end, ideally with Bailey in and any other directors who want a say.</p>
+
+                    <div class="date-grid">
+                        <div class="date-card"><div class="dd">Option 1</div><div class="dn">Tue 24 Nov</div><div class="dt">10:00 &ndash; 12:00</div><a href="mailto:emilio.lavia@bigchange.com?subject=Priority%20Pumps%20session%20-%20Tue%2024%20Nov%2010am">This works &rarr;</a></div>
+                        <div class="date-card"><div class="dd">Option 2</div><div class="dn">Wed 25 Nov</div><div class="dt">10:00 &ndash; 12:00</div><a href="mailto:emilio.lavia@bigchange.com?subject=Priority%20Pumps%20session%20-%20Wed%2025%20Nov%2010am">This works &rarr;</a></div>
+                        <div class="date-card"><div class="dd">Option 3</div><div class="dn">Thu 26 Nov</div><div class="dt">13:00 &ndash; 15:00</div><a href="mailto:emilio.lavia@bigchange.com?subject=Priority%20Pumps%20session%20-%20Thu%2026%20Nov%201pm">This works &rarr;</a></div>
+                    </div>
+
+                    <div class="need-box">
+                        <div class="need-head">
+                            <span class="need-ic"><span class="msi">upload_file</span></span>
+                            <div>
+                                <span class="need-tag">Before the session</span>
+                                <h4>What would help us build it</h4>
+                                <p>The more of your real material we have, the more of the session is your business in BigChange rather than a generic demo. Reply to Emilio&rsquo;s email with whatever you can share.</p>
+                            </div>
+                        </div>
+                        <ul class="need-grid">
+                            <li><span class="msi">checklist</span><span><strong>Your list of non-negotiables</strong></span></li>
+                            <li><span class="msi">description</span><span><strong>Your pumping station report</strong> and any other job cards</span></li>
+                            <li><span class="msi">inventory_2</span><span><strong>An example picking list,</strong> or what you want one to show</span></li>
+                            <li><span class="msi">request_quote</span><span><strong>A recent quote,</strong> ideally one with a bill of materials</span></li>
+                            <li><span class="msi">table_view</span><span><strong>A product import file</strong> from one of your supplier price lists</span></li>
+                            <li><span class="msi">account_tree</span><span><strong>A sketch of your workflow,</strong> enquiry to invoice</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-strip">
+                        <div class="who">Emilio Lavia<span>Account Executive, BigChange</span></div>
+                        <a href="mailto:emilio.lavia@bigchange.com"><span class="msi">mail</span> emilio.lavia@bigchange.com</a>
+                        <a href="tel:07460070793"><span class="msi">call</span> 07460 070793</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="text-align: center;">
+                <div style="display:flex; justify-content:center; align-items:center; gap:1.2rem; margin-bottom:1.8rem; flex-wrap:wrap;">
+                    <span class="logo-chip" style="padding:8px 14px;">
+                        <img src="https://images.squarespace-cdn.com/content/v1/66f40d66337a661b9432a192/3ba60ec2-7137-4d12-bb2d-52025d05ca64/Original+on+transparent.png" alt="Priority Pumps Logo" style="height:48px;" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        <span class="pp-wordmark" style="display:none; font-size:1.2rem;">Priority <b>Pumps</b></span>
+                    </span>
+                    <span style="color:rgba(255,255,255,0.4); font-size:1.3rem; font-weight:bold;">+</span>
+                    <img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange Logo" style="height:30px;">
+                </div>
+                <h3 style="color: var(--bc-light-grey); margin-bottom: 1rem;">From the first call to the last report on every asset, in one place.</h3>
+                <p style="opacity: 0.7;">This proposal has been built specifically for James, Bailey and the team at Priority Pumps.</p>
+                <p style="opacity: 0.7; margin-top: 1rem;">&copy; 2026 BigChange. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // RECORDING SLOT
+            const recFrame = document.getElementById('rec-frame');
+            const recPending = document.getElementById('rec-pending');
+            if (recFrame) {
+                const ifr = recFrame.querySelector('iframe');
+                const url = ifr ? (ifr.getAttribute('data-src') || '') : '';
+                if (/^https?:\/\//.test(url)) { ifr.src = url; }
+                else { recFrame.style.display = 'none'; if (recPending) recPending.style.display = 'block'; }
+            }
+
+            // REPORT BUILDER
+            const jobs = [
+                { id: 'callout', name: 'Call-out', icon: 'emergency', fields: ['Fault reported', 'Fault found', 'Cause', 'Action taken', 'Parts used', 'Follow-on work needed?'] },
+                { id: 'service', name: 'Service', icon: 'build', fields: ['Service checklist', 'Readings', 'Parts replaced', 'Next service due', 'Recommendations'] },
+                { id: 'install', name: 'Installation', icon: 'handyman', fields: ['Equipment installed', 'Pipework & connections', 'Electrical connections', 'Handover to customer', 'Asset record updated'] },
+                { id: 'commission', name: 'Commissioning', icon: 'verified', fields: ['Test readings', 'Duty/standby test', 'Alarm test', 'Settings recorded', 'Commissioning sign-off'] },
+                { id: 'survey', name: 'Site survey', icon: 'travel_explore', fields: ['Site access', 'Existing equipment', 'Measurements', 'Recommended works', 'Send to quote'] }
+            ];
+            const assets = [
+                { id: 'ps', name: 'Pumping station', icon: 'water_pump', pre: ['Station type', 'Control panel', 'Pump make & model', 'Serial numbers', 'Number of floats', 'what3words'], fresh: ['Pump operation', 'Floats & level control', 'Alarm', 'Chamber condition', 'Valves & pipework'] },
+                { id: 'stp', name: 'Treatment plant', icon: 'water_drop', pre: ['Plant make & model', 'Population rating', 'Blower / air pump', 'Serial number', 'what3words'], fresh: ['Blower operation', 'Effluent quality', 'Sludge level', 'Desludge needed?', 'Alarm'] },
+                { id: 'rwh', name: 'Rainwater harvesting', icon: 'water', pre: ['Tank size', 'Pump & controller', 'Filter type', 'Serial number', 'what3words'], fresh: ['Filter condition', 'Pump operation', 'Mains back-up', 'Tank condition', 'Controller'] },
+                { id: 'press', name: 'Pressurisation set', icon: 'compress', pre: ['Set make & model', 'Pumps', 'Expansion vessel', 'Serial numbers'], fresh: ['Vessel pre-charge', 'Pressure switch', 'Pump operation', 'Leaks', 'Controls'] },
+                { id: 'oil', name: 'Oil separator', icon: 'oil_barrel', pre: ['Separator class', 'Capacity', 'Alarm type', 'Serial number', 'what3words'], fresh: ['Oil level', 'Silt level', 'Alarm test', 'Emptying needed?', 'Cover condition'] }
+            ];
+            let jobSel = 'service', assetSel = 'ps';
+            const jobsWrap = document.getElementById('rb-jobs');
+            const assetsWrap = document.getElementById('rb-assets');
+            const rbBody = document.getElementById('rb-body');
+            const rbTitle = document.getElementById('rb-title');
+            const chips = (arr, cls) => '<div class="rb-fields">' + arr.map(f => '<span class="rb-f ' + cls + '">' + f + '</span>').join('') + '</div>';
+            const renderReport = () => {
+                const j = jobs.find(x => x.id === jobSel);
+                const a = assets.find(x => x.id === assetSel);
+                rbTitle.innerHTML = j.name + ' &middot; ' + a.name;
+                rbBody.style.opacity = 0;
+                setTimeout(() => {
+                    rbBody.innerHTML =
+                        '<div class="rb-sec pre"><h5><span class="msi">inventory</span>From the asset profile <small>Pre-filled, editable</small></h5>' + chips(a.pre, 'pre') + '</div>' +
+                        '<div class="rb-sec fresh"><h5><span class="msi">rule</span>Condition checks <small>Blank every visit</small></h5>' + chips(a.fresh, 'fresh') + '</div>' +
+                        '<div class="rb-sec job"><h5><span class="msi">' + j.icon + '</span>' + j.name + ' questions <small>Only for this job type</small></h5>' + chips(j.fields, 'job') + '</div>' +
+                        '<div class="rb-sec free"><h5><span class="msi">edit_note</span>Always on the report <small>Every job</small></h5>' + chips(['Engineer notes', 'Photos', 'Scanned documents', 'Previous report', 'Customer signature'], 'free') + '</div>' +
+                        '<p class="rb-foot">Completed on site &rarr; PDF on your template &rarr; sent to the client</p>';
+                    rbBody.style.opacity = 1;
+                }, 120);
+                jobsWrap.querySelectorAll('.rb-opt').forEach(b => { const on = b.dataset.id === jobSel; b.classList.toggle('active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+                assetsWrap.querySelectorAll('.rb-opt').forEach(b => { const on = b.dataset.id === assetSel; b.classList.toggle('active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+            };
+            const buildOpts = (list, wrap, onPick) => {
+                list.forEach(item => {
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'rb-opt';
+                    b.dataset.id = item.id;
+                    b.innerHTML = '<span class="msi">' + item.icon + '</span>' + item.name;
+                    b.addEventListener('click', () => { onPick(item.id); renderReport(); });
+                    wrap.appendChild(b);
+                });
+            };
+            if (jobsWrap && assetsWrap && rbBody) {
+                buildOpts(jobs, jobsWrap, id => { jobSel = id; });
+                buildOpts(assets, assetsWrap, id => { assetSel = id; });
+                renderReport();
+            }
+
+            // END-TO-END CLICK-THROUGH
+            const fitInfo = {
+                std: { icon: 'check_circle', text: 'Standard' },
+                cfg: { icon: 'tune', text: 'Set up for you' },
+                prove: { icon: 'science', text: 'We&rsquo;ll prove it' }
+            };
+            const stages = [
+                { icon: 'person_search', lab: 'Enquiry', fit: 'std',
+                  title: 'An enquiry becomes a sales opportunity',
+                  aTitle: 'Your sales team', a: ['Log the contact, the call and a summary as a note, with the date and time stamped.', 'Drag in emails, drawings and photos so everyone sees the same folder.', 'Assign an owner, a stage and a due date. Track the whole pipeline on a dashboard.'],
+                  bTitle: 'Automatic', bType: 'auto', b: ['An &ldquo;enquiry received&rdquo; email goes out when the opportunity is created.', 'Move the due date and you get a reminder to chase on the day.'],
+                  note: 'One place for prospects, so you don&rsquo;t need Pipedrive as well.',
+                  honest: 'Emails sent from your own inbox don&rsquo;t log themselves the way Pipedrive does. You drag the important ones into the opportunity.' },
+                { icon: 'request_quote', lab: 'Quote', fit: 'cfg',
+                  title: 'Build the quote from your catalogue',
+                  aTitle: 'Your sales team', a: ['Pick from predefined items, or a set that pulls in a full bill of materials: the customer sees one line, the warehouse sees every part.', 'Labour, day rates, equipment hire, tankers and water sampling set up as their own items.', 'Lead times, bank details, Stripe link and T&amp;Cs on your own quote template.'],
+                  bTitle: 'The customer', bType: 'cust', b: ['Opens the quote from a link, accepts and signs online.', 'If they haven&rsquo;t accepted after 7 days, a follow-up email goes automatically.'],
+                  note: 'Several quote versions can sit on one opportunity until one is accepted.',
+                  honest: 'JobLogic lets you filter by price list, then product type, then search. In BigChange we get the same result with a naming convention (brand, category, model). We&rsquo;ll prove it with one of your supplier files.' },
+                { icon: 'swap_horiz', lab: 'Convert', fit: 'cfg',
+                  title: 'Quote accepted: the handover',
+                  aTitle: 'Office', a: ['The accepted quote creates the job inside the same opportunity, with all the paperwork attached.', 'Labour-only jobs go straight to booking.', 'Jobs with parts get a checklist that must be complete before anyone can book them.'],
+                  bTitle: 'Warehouse &amp; purchasing', bType: 'wh', b: ['A list of what needs buying, separate from what&rsquo;s already in stock.', 'Subcontract items (a tanker, water sampling) flagged to source a supplier.'],
+                  note: 'No more allocating parts the moment an order converts.',
+                  honest: 'This purchasing flow is the part Danielle flagged to build carefully. It&rsquo;s the centrepiece of what we&rsquo;ll show you.' },
+                { icon: 'local_shipping', lab: 'Buy &amp; book in', fit: 'prove',
+                  title: 'Order it, book it in, share the lead time',
+                  aTitle: 'Warehouse &amp; purchasing', a: ['Purchase orders raised against each product&rsquo;s preferred supplier, so cable comes from the supplier with your agreed rates.', 'Goods booked in against the job when they arrive.', 'Expected dates visible to the service team, so nobody books a job early.'],
+                  bTitle: 'Stock', bType: 'wh', b: ['Minimum, maximum and reorder levels per product.', 'Supplier price lists imported in bulk, with cost and sale price.', 'Locations for the warehouse, down to the bay, and for each van.'],
+                  note: 'The office and the warehouse looking at the same job, not shouting across the building.',
+                  honest: 'Stock is where we&rsquo;ll go into the most detail with your data, to make sure it fits your volumes.' },
+                { icon: 'inventory_2', lab: 'Pick', fit: 'prove',
+                  title: 'Pick it, box it, bay it',
+                  aTitle: 'Warehouse', a: ['A pick list from the job&rsquo;s bill of materials: what to pick, how many, from where. No prices.', 'Know whether it&rsquo;s supplied loose, built in-house, or bought as a complete unit.', 'The box and the job carry the bay location the engineer collects from.'],
+                  bTitle: 'Returns', bType: 'wh', b: ['Over-supplied parts and warranty returns tracked back into stock or back to the manufacturer.'],
+                  note: 'No more quotations left lying around the warehouse.',
+                  honest: 'We need to see your ideal picking list to design this one. Returns are handled with status fields rather than a dedicated returns module.' },
+                { icon: 'event_available', lab: 'Book &amp; go', fit: 'std',
+                  title: 'Booked, synced, on the way',
+                  aTitle: 'Office', a: ['Drag the job onto the schedule. Move it and the engineer&rsquo;s device updates. No reallocate button.', 'Live map of every van, with ETAs.'],
+                  bTitle: 'The customer &amp; site contact', bType: 'cust', b: ['&ldquo;On our way&rdquo; by email or text when the engineer sets off.', '&ldquo;We&rsquo;ve arrived&rdquo; when the van enters the area around the site, using what3words for big sites.'],
+                  note: 'The person paying the bill knows you&rsquo;re there, even on a large site.' },
+                { icon: 'assignment', lab: 'On site', fit: 'cfg',
+                  title: 'Work on the asset, not just the job',
+                  aTitle: 'Engineer app', a: ['The report opens by job type and asset type (see the next section).', 'Previous reports for that asset on the device.', 'Unlimited photos, scanned documents, and the customer&rsquo;s signature.'],
+                  bTitle: 'What builds up', bType: 'auto', b: ['Every service, install and repair against the asset, in one history.', 'Asset agreements and service schedules for PPM contracts, with jobs created when visits are due.'],
+                  note: 'Report done before the van leaves. Not by the end of the day.' },
+                { icon: 'receipt_long', lab: 'Invoice', fit: 'std',
+                  title: 'Invoice and into Xero',
+                  aTitle: 'Office', a: ['Invoice built from the job, with the report attached.', 'Payment link on the invoice.', 'Synced to Xero.'],
+                  bTitle: 'What you can see', bType: 'auto', b: ['Profit by job, open quotes, unpaid invoices and pipeline, on dashboards.'],
+                  note: 'One record from the first phone call to the paid invoice.' }
+            ];
+            const stepsWrap = document.getElementById('j-steps');
+            const panel = document.getElementById('j-panel');
+            const fill = document.getElementById('j-track-fill');
+            const prevBtn = document.getElementById('j-prev');
+            const nextBtn = document.getElementById('j-next');
+            const countEl = document.getElementById('j-count');
+            if (stepsWrap && panel) {
+                let cur = 0;
+                const colIcon = { auto: 'insights', cust: 'person', wh: 'warehouse', field: 'smartphone' };
+                const list = (arr) => '<ul>' + arr.map(x => '<li>' + x + '</li>').join('') + '</ul>';
+                const render = () => {
+                    const s = stages[cur];
+                    const f = fitInfo[s.fit];
+                    panel.style.opacity = 0;
+                    setTimeout(() => {
+                        panel.innerHTML =
+                            '<div class="j-head"><div><span class="j-num">Stage ' + (cur + 1) + ' of ' + stages.length + '</span><h3>' + s.title + '</h3></div>' +
+                            '<span class="fit ' + s.fit + '"><span class="msi">' + f.icon + '</span>' + f.text + '</span></div>' +
+                            '<div class="j-cols">' +
+                                '<div class="j-col"><h4><span class="msi">desktop_windows</span>' + s.aTitle + '</h4>' + list(s.a) + '</div>' +
+                                '<div class="j-col ' + (s.bType === 'wh' ? 'wh' : 'field') + '"><h4><span class="msi">' + colIcon[s.bType] + '</span>' + s.bTitle + '</h4>' + list(s.b) + '</div>' +
+                            '</div>' +
+                            '<div class="lp-note"><span class="msi">check_circle</span><span>' + s.note + '</span></div>' +
+                            (s.honest ? '<div class="j-honest"><span class="msi">flag</span><span><strong>Straight answer:</strong> ' + s.honest + '</span></div>' : '');
+                        panel.style.opacity = 1;
+                    }, 150);
+                    stepsWrap.querySelectorAll('.j-step').forEach((b, i) => {
+                        b.classList.toggle('active', i === cur);
+                        b.classList.toggle('done', i < cur);
+                        b.setAttribute('aria-selected', i === cur ? 'true' : 'false');
+                    });
+                    if (fill) fill.style.width = (cur / (stages.length - 1) * 100) + '%';
+                    prevBtn.disabled = cur === 0;
+                    nextBtn.disabled = cur === stages.length - 1;
+                    countEl.textContent = (cur + 1) + ' / ' + stages.length;
+                };
+                stages.forEach((s, i) => {
+                    const li = document.createElement('li');
+                    li.style.display = 'contents';
+                    const b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'j-step';
+                    b.setAttribute('role', 'tab');
+                    b.innerHTML = '<span class="j-dot"><span class="msi">' + s.icon + '</span></span><span class="j-lab">' + s.lab + '</span><span class="j-fitdot ' + s.fit + '" aria-hidden="true"></span>';
+                    b.addEventListener('click', () => { cur = i; render(); });
+                    li.appendChild(b);
+                    stepsWrap.appendChild(li);
+                });
+                prevBtn.addEventListener('click', () => { if (cur > 0) { cur--; render(); } });
+                nextBtn.addEventListener('click', () => { if (cur < stages.length - 1) { cur++; render(); } });
+                render();
+            }
+
+            // FEATURE HUB
+            const hub = document.getElementById('platform-hub');
+            const tileGrid = document.getElementById('feature-tile-grid');
+            const featureDisplayContent = document.getElementById('feature-display-content');
+            if (hub && featureDisplayContent) {
+                const features = [
+                    { name: 'Sales opportunities', icon: 'handshake', desc: 'A folder per enquiry holding the contact, notes, attachments, quotes and every job that follows, with stages, probability and owner.', you: 'Your CRM for the new sales and business development manager, without a separate Pipedrive subscription.' },
+                    { name: 'Automations', icon: 'bolt', desc: 'Rules that send emails or create reminders when something happens, or doesn&rsquo;t: a quote sent, a due date passed, a job completed.', you: 'Quote follow-ups after 7 days, and a nudge to call the prospect you spoke to last week.' },
+                    { name: 'Predefined items &amp; sets', icon: 'category', desc: 'Your products and services with buy and sell prices. Sets group items that are sold together, like a bill of materials.', you: 'A pumping station as one quote line, with every part behind it for the warehouse.' },
+                    { name: 'Price-list imports', icon: 'upload_file', desc: 'Import thousands of products in one go with cost price, sale price, supplier and attachments, and update them the same way.', you: 'Load a supplier&rsquo;s range so the team can quote it straight away.' },
+                    { name: 'Online quote acceptance', icon: 'draw', desc: 'Customers view, accept or reject a quote from a link, sign it digitally and get a receipt automatically.', you: 'Your existing quote layout, with bank details, Stripe link and T&amp;Cs.' },
+                    { name: 'Purchase orders', icon: 'shopping_cart', desc: 'Raise purchase orders against jobs and suppliers, with preferred suppliers set per product.', you: 'Cable from the supplier with your agreed rates, every time.' },
+                    { name: 'Stock locations', icon: 'shelves', desc: 'Stock held by location (warehouse, bay, van) with minimum, maximum and reorder levels.', you: 'Know what&rsquo;s on which van and which bay in the warehouse.' },
+                    { name: 'Pick lists', icon: 'inventory_2', desc: 'A list of what to pick for a job, built from its items, without prices.', you: 'Replaces the printed quotation in the warehouse.' },
+                    { name: 'Scheduling', icon: 'calendar_month', desc: 'Drag-and-drop schedule with travel time between jobs and warnings when someone will run late.', you: 'Jobs with parts only become bookable once the parts are in.' },
+                    { name: 'Live device sync', icon: 'sync', desc: 'Any change to a job reaches the engineer&rsquo;s app in real time.', you: 'No reallocate button, and no notes that never make it to site.' },
+                    { name: 'Vehicle tracking', icon: 'gps_fixed', desc: 'Hard-wired trackers with live positions, journey history and geofences around each site. Fitting included.', you: 'Something you wanted and don&rsquo;t have today.' },
+                    { name: 'Customer alerts', icon: 'notifications_active', desc: '&ldquo;On our way&rdquo; and &ldquo;arrived&rdquo; messages by email or text, triggered by the tracker.', you: 'The site contact and the bill payer both know you&rsquo;re there.' },
+                    { name: 'Engineer app', icon: 'phone_iphone', desc: 'Jobs, directions, reports, photos, signatures and messages on iOS or Android, online or offline.', you: 'Reports finished on site, not via WhatsApp or a Google Sheet.' },
+                    { name: 'Smart worksheets', icon: 'account_tree', desc: 'Forms with branching logic, drop-downs and mandatory questions, chosen by job type.', you: 'The job type, then asset type, decision tree you described.' },
+                    { name: 'Asset management', icon: 'water_pump', desc: 'A profile for every asset at every site, with its full service history and details that pre-fill worksheets.', you: 'Pump specs, panels and floats recorded once, not on every visit.' },
+                    { name: 'Contracts &amp; PPM', icon: 'event_repeat', desc: 'Asset agreements define what&rsquo;s covered and how often. Due services create jobs in bulk.', you: 'Where you&rsquo;re heading with PPM contracts, ready when you are.' },
+                    { name: 'Your own templates', icon: 'edit_document', desc: 'Reports, quotes and invoices built in a Microsoft Word add-in using merge fields, with conditional logic.', you: 'Change them yourselves, whenever you want, at no charge.' },
+                    { name: 'Invoicing &amp; Xero', icon: 'receipt_long', desc: 'Invoices built from completed jobs, sent with the report and a payment link, then synced to your accounts.', you: 'Xero stays your accounts package.' }
+                ];
+                const updateFeatureDisplay = (feature) => {
+                    featureDisplayContent.style.opacity = 0;
+                    setTimeout(() => {
+                        featureDisplayContent.innerHTML =
+                            '<div class="fd-head"><span class="msi">' + feature.icon + '</span><h3>' + feature.name + '</h3></div>' +
+                            '<p class="fd-desc">' + feature.desc + '</p>' +
+                            '<div class="fd-you"><span class="msi">check_circle</span><span>For Priority Pumps: ' + feature.you + '</span></div>' +
+                            '<div class="fd-count">' + (features.indexOf(feature) + 1) + ' of ' + features.length + '</div>';
+                        featureDisplayContent.style.opacity = 1;
+                    }, 200);
+                };
+                const setActive = (nodes, node) => { nodes.forEach(n => n.classList.remove('active')); node.classList.add('active'); };
+                if (tileGrid) {
+                    features.forEach((feature, i) => {
+                        const t = document.createElement('button');
+                        t.type = 'button';
+                        t.className = 'feature-tile' + (i === 0 ? ' active' : '');
+                        t.innerHTML = '<span class="msi">' + feature.icon + '</span><span class="feature-name">' + feature.name + '</span>';
+                        t.addEventListener('click', () => { updateFeatureDisplay(feature); setActive(tileGrid.querySelectorAll('.feature-tile'), t); });
+                        tileGrid.appendChild(t);
+                    });
+                }
+                let activeIndex = 0;
+                const buildHub = () => {
+                    hub.querySelectorAll('.hub-node, .hub-line').forEach(el => el.remove());
+                    const w = hub.offsetWidth;
+                    if (!w) return;
+                    const cx = w / 2, cy = hub.offsetHeight / 2;
+                    const nodeR = 43;
+                    const outerRadius = w / 2 - nodeR - 2;
+                    const innerRadius = w / 2 - nodeR - 98;
+                    const outer = features.filter((_, i) => i % 2 === 0);
+                    const inner = features.filter((_, i) => i % 2 !== 0);
+                    const place = (list, radius, isOuter) => {
+                        const step = (2 * Math.PI) / list.length;
+                        list.forEach((feature, i) => {
+                            const angle = (i * step) - (Math.PI / 2) + (isOuter ? 0 : step / 2);
+                            const x = radius * Math.cos(angle) + cx - nodeR;
+                            const y = radius * Math.sin(angle) + cy - nodeR;
+                            const node = document.createElement('div');
+                            node.className = 'hub-node' + (features.indexOf(feature) === activeIndex ? ' active' : '');
+                            node.tabIndex = 0;
+                            node.setAttribute('role', 'button');
+                            node.setAttribute('aria-label', feature.name.replace(/&amp;/g, '&'));
+                            node.style.left = x + 'px';
+                            node.style.top = y + 'px';
+                            node.innerHTML = '<span class="msi">' + feature.icon + '</span><span class="feature-name">' + feature.name + '</span>';
+                            const activate = () => { activeIndex = features.indexOf(feature); updateFeatureDisplay(feature); setActive(hub.querySelectorAll('.hub-node'), node); };
+                            node.addEventListener('click', activate);
+                            node.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+                            const line = document.createElement('div');
+                            line.className = 'hub-line';
+                            const dist = Math.sqrt(Math.pow(x + nodeR - cx, 2) + Math.pow(y + nodeR - cy, 2));
+                            const rot = Math.atan2(y + nodeR - cy, x + nodeR - cx) * (180 / Math.PI);
+                            line.style.width = Math.max(dist - nodeR + 8, 0) + 'px';
+                            line.style.top = cy + 'px';
+                            line.style.left = cx + 'px';
+                            line.style.transform = 'rotate(' + rot + 'deg)';
+                            hub.appendChild(line);
+                            hub.appendChild(node);
+                        });
+                    };
+                    place(outer, outerRadius, true);
+                    place(inner, innerRadius, false);
+                };
+                buildHub();
+                let resizeTimer;
+                window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(buildHub, 200); });
+                updateFeatureDisplay(features[0]);
+            }
+
+            // Scroll-reveal
+            const revealEls = Array.from(document.querySelectorAll('.section-title, .sticking, .compare, .rb, .journey, .tl, .support-panel, .cs-grid, .next-steps-card'));
+            revealEls.forEach(el => el.classList.add('reveal'));
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, i) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => entry.target.classList.add('visible'), Math.min(i, 4) * 70);
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.08 });
+                revealEls.forEach(el => io.observe(el));
+                setTimeout(() => revealEls.forEach(el => el.classList.add('visible')), 2500);
+            } else {
+                revealEls.forEach(el => el.classList.add('visible'));
+            }
+
+            const nav = document.getElementById('sticky-nav');
+            if (nav) {
+                const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+        });
+    </script>
+</body>
+</html>
